@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="sftp://10.11.12.24:800/" added="2022-04-14T13:25:53.995081Z" modified="2022-04-21T15:59:54.551058Z" visited="2022-04-21T15:59:54.551053Z">
+    <title>/ on 10.11.12.24</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2022-04-21T15:59:54.551055Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="sftp://free-eu1.skynode.pro:2022/" added="2022-04-14T16:58:55.226578Z" modified="2022-04-14T16:58:55.226585Z" visited="2022-04-14T16:58:55.226580Z">
+    <title>/ on free-eu1.skynode.pro</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2022-04-14T16:58:55.226582Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="sftp://192.168.1.152/" added="2022-08-23T16:08:35.231700Z" modified="2022-08-23T17:22:53.573075Z" visited="2022-08-23T17:22:53.573066Z">
+    <title>/ on 192.168.1.152</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2022-08-23T17:22:53.573070Z" count="7"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>
