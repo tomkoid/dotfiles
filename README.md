@@ -12,4 +12,4 @@ git clone https://gitlab.com/Tomkoid/dotfiles.git tomkoid-dotfiles --recurse-sub
 Clone the repository and copy all files to your home directory:
 
 ```
-git clone https://gitlab.com/Tomkoid/dotfiles.git tomkoid-dotfiles --recurse-submodules
+git clone https://gitlab.com/Tomkoid/dotfiles.git tomkoid-dotfiles --recurse-submodules && cp -r tomkoid-dotfiles/{.,}* ~/
