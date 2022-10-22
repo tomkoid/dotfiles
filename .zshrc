@@ -117,3 +117,5 @@ source ~/.bash_aliases
 source ~/.dots
 
 export RUSTC_WRAPPER=sccache
+
+if [ -e /home/tom/.nix-profile/etc/profile.d/nix.sh ]; then . /home/tom/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
