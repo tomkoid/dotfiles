@@ -114,8 +114,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Load custom aliases
 source ~/.bash_aliases
-source ~/.dots
 
 export RUSTC_WRAPPER=sccache
+
+export GPG_TTY=$(tty)
 
 if [ -e /home/tom/.nix-profile/etc/profile.d/nix.sh ]; then . /home/tom/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
