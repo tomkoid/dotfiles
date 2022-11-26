@@ -5,3 +5,5 @@ file:///home/tom/Pictures Pictures
 file:///home/tom/Videos Videos
 file:///home/tom/Downloads Downloads
 sftp://10.11.12.24:800/home/tom Server
+file:/// /
+file:///home/tom/mnt/Internal%20shared%20storage/Documents Documents

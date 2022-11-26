@@ -44,6 +44,9 @@ alias gradd="git remote add"
 alias gpush="git push -u"
 alias grm="git rm --cached"
 
+# helix
+alias hx="helix"
+
 # mpv
 alias play-yt='mpv --no-config --script-opts=ytdl_hook-ytdl_path=yt-dlp --msg-level=all=no,ytdl_hook=trace --ytdl-format=22'
 

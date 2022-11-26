@@ -1,1 +1,18 @@
-@theme "/usr/share/rofi/themes/android_notification.rasi"
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "🪶 Run";    
+    scroll-method: 1;
+    display-power: "Power menu";
+    display-emoji: "💀 Emoji";
+    sidebar-mode: true;
+    font: "JetBrains Mono NF 12";
+}
+
+@theme "./catppuccin/macchiato.rasi"
+
