@@ -1,5 +1,5 @@
 # DOTFILES
-These are my dotfiles, that I use daily.
+These are my dotfiles, that I use on my daily-driver.
 
 # Install
 Only clone the repository to new directory:
