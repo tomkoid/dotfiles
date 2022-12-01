@@ -1,17 +1,19 @@
 configuration {
-    modi: "drun,run";
+    modi: "drun,run,window";
     show-icons: true;
     terminal: "alacritty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "🪶 Run";    
+    display-drun: "    Apps ";    
+    display-run: "    Run ";
+    display-window: " 﩯  Window ";
     scroll-method: 1;
     display-power: "Power menu";
     display-emoji: "💀 Emoji";
     sidebar-mode: true;
-    font: "JetBrains Mono NF 12";
+    font: "Cantarell 13";
 }
 
 @theme "./catppuccin/macchiato.rasi"

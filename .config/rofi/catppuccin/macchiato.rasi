@@ -1,7 +1,7 @@
 * {
     bg-col:  #21273a;
     bg-col-light: #24273a;
-    border-col: #24273a;
+    border-col: #363a4f;
     selected-col: #24273a;
     blue: #8aadf4;
     fg-col: #cad3f5;
@@ -23,9 +23,9 @@ window {
 
     background-color: @bg-col;
 
-    border: 3px;
+    border: 2px;
     border-color: @border-col;
-    border-radius: 4px;
+    border-radius: 50px;
 }
 
 mainbox {

@@ -2,15 +2,17 @@
 
 CONFIG_PATH="${HOME}/.config/bspwm"
 
-WINDOW_GAP=10
+WINDOW_GAP=5
 BORDER_WIDTH=2
-TOP_PADDING=25
+TOP_PADDING=30
 
 # Load monitor config
 $HOME/.screenlayout/setup.sh
 
-# Load gap script
-$CONFIG_PATH/scripts/gap.sh &
+# Custom scripts
+$CONFIG_PATH/scripts/gap.sh & # Load gap script
+bash ~/.config/bspwm/scripts/sensitivity.sh & # Start mouse sensitivity script
+$CONFIG_PATH/scripts/battery.sh & # Check every 10 seconds battery level
 
 # Start Polybar
 polybar main &
@@ -25,15 +27,15 @@ nitrogen --restore &
 # Start picom
 picom &
 
-# Start mouse sensitivity script
-bash ~/.config/bspwm/scripts/sensitivity.sh &
-
 # Start notification daemon
 dunst &
 
 # Set cursor theme
 xsetroot -cursor_name left_ptr
 pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Start session manager
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # bspc monitor VGA-1 -d 6 7 8 9 10
 # bspc monitor LVDS-1 -d 1 2 3 4 5
