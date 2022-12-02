@@ -39,6 +39,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # Start session manager
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
+# Start syncthing
+syncthing --no-browser &
+
 # bspc monitor VGA-1 -d 6 7 8 9 10
 # bspc monitor LVDS-1 -d 1 2 3 4 5
 
