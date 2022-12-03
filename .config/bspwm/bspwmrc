@@ -53,7 +53,7 @@ then
   for monitor in $(bspc query -M); do
     bspc monitor $monitor -r
   done
-  bspc monitor $(bspc query -M -d) -d 1 2 3 4 5 6 7 8 9 0
+  bspc monitor $(bspc query -M -d) -d 1 2 3 4 5 6 7 8 9 10
 else
   per_monitor=$(( 10 / monitors_connected ))
   for monitor in $(xrandr | grep " connected " | awk '{ print $1 }'); do
