@@ -5,6 +5,8 @@ ttf-nerd-fonts-symbols-common
 ttf-font-awesome
 ttf-jetbrains-mono
 ttf-ubuntu-font-family
+unzip
+wget
 rofi
 git
 polybar
