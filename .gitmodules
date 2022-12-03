@@ -1,3 +1,7 @@
 [submodule ".config/awesome"]
 	path = .config/awesome
-	url = https://gitlab.com/Tomkoid/awesome-dotfiles.git
+  url = https://gitlab.com/Tomkoid/awesome-dotfiles.git
+
+[submodule ".config/alacritty/catppuccin"]
+  path = .config/alacritty/catppuccin
+  url = https://github.com/catppuccin/alacritty.git
