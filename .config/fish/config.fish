@@ -3,7 +3,6 @@ if status is-interactive
 end
 
 source ~/.bash_aliases
-source ~/.dots
 fish_add_path /home/tom/.spicetify
 
-#starship init fish | source
+starship init fish | source
