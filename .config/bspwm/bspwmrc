@@ -68,12 +68,13 @@ bspc config border_width        $BORDER_WIDTH
 bspc config window_gap          $WINDOW_GAP
 # bspc config top_padding         $TOP_PADDING
 
-bspc config split_ratio          0.50
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
-bspc config focused_border_color $FOCUSED_WINDOW_BORDER
-bspc config active_border_color  $NOT_FOCUSED_WINDOW_BORDER
-bspc config normal_border_color  $NOT_FOCUSED_WINDOW_BORDER
+bspc config split_ratio           0.50
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true
+bspc config focus_follows_pointer true # Automatically focus window on hover
+bspc config focused_border_color  $FOCUSED_WINDOW_BORDER
+bspc config active_border_color   $NOT_FOCUSED_WINDOW_BORDER
+bspc config normal_border_color   $NOT_FOCUSED_WINDOW_BORDER
 #bspc config automatic_scheme     master
 # bsp-layout set tall
 
