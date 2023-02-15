@@ -2,7 +2,7 @@
 alias rl="source ~/.bash_aliases && source ~/.dots"
 
 # rust replacements
-alias ls="lsd -la"
+alias ls="lsd -l"
 #alias cat="bat"
 alias ps="procs"
 
@@ -50,6 +50,9 @@ alias hx="helix"
 # mpv
 alias play-yt='mpv --no-config --script-opts=ytdl_hook-ytdl_path=yt-dlp --msg-level=all=no,ytdl_hook=trace --ytdl-format=22'
 
+# yt-dlp
+alias download-mp3='yt-dlp --ignore-errors --output "%(title)s.%(ext)s" --extract-audio --audio-format mp3'
+
 # dotfiles repo
 alias config='/usr/bin/git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
 
@@ -58,6 +61,7 @@ alias export-key="gpg --export --armor --output exported.key"
 
 # misc
 alias bat="bat --theme='Catppuccin-macchiato'"
+alias paru="paru --bottomup"
 
 # video2gif() {
 #   ffmpeg -y -i "${1}" -vf fps=${3:-10},scale=${2:-320}:-1:flags=lanczos,palettegen "${1}.png"

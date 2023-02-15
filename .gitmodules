@@ -1,3 +1,0 @@
-[submodule ".config/awesome"]
-	path = .config/awesome
-  url = https://gitlab.com/Tomkoid/awesome-dotfiles.git

@@ -18,13 +18,29 @@ super + b
 XF86AudioLowerVolume
   pamixer -d 5
 
+# volume down with super key
+super + F6
+  pamixer -d 5
+
 # volume Up
 XF86AudioRaiseVolume
+  pamixer -i 5
+
+# volume up with super key
+super + F7
   pamixer -i 5
 
 # volume mute
 XF86AudioMute
   pamixer -t
+
+# brightness up
+XF86MonBrightnessUp
+  brightnessctl -d intel_backlight set +5000
+
+# brightness down
+XF86MonBrightnessDown
+  brightnessctl -d intel_backlight set 5000-
 
 # screenshot
 Print

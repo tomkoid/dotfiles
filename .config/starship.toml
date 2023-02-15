@@ -21,3 +21,6 @@ disabled = true
 
 [lua]
 format = ""
+
+[rust]
+format = ""
