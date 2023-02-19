@@ -2,6 +2,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# PATH
+export PATH="$HOME/.cargo/bin:$PATH"
+
 source ~/.bash_aliases
 fish_add_path /home/tom/.spicetify
 
