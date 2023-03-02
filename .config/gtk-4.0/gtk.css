@@ -116,3 +116,4 @@
 @define-color dark_3 rgb(36,39,58);
 @define-color dark_4 rgb(30,32,48);
 @define-color dark_5 rgb(24,25,38);
+@import 'colors.css';
