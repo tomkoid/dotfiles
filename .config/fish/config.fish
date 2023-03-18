@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 # PATH
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.surrealdb:$PATH"
 
 source ~/.bash_aliases
 fish_add_path /home/tom/.spicetify

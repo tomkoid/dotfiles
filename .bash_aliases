@@ -2,7 +2,7 @@
 alias rl="source ~/.bash_aliases && source ~/.dots"
 
 # rust replacements
-alias ls="lsd -l"
+alias ls="exa -l --git"
 #alias cat="bat"
 alias ps="procs"
 
