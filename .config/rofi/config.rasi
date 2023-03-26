@@ -16,5 +16,5 @@ configuration {
     font: "Cantarell 13";
 }
 
-@theme "./catppuccin/macchiato.rasi"
+@theme "./catppuccin/mocha.rasi"
 
