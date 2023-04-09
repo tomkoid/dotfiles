@@ -144,6 +144,7 @@ font-size: 15px;
 #network{
 font-size:15px;
 }
+
 #network {
   background-color: transparent;
   color: @sapphire;
@@ -158,3 +159,18 @@ font-size:15px;
   margin-right:10px;
   }
 
+#battery {
+  background-color: transparent;
+  color: @yellow;
+  font-size: 15px;
+  background: @mantle;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 15px;
+}
