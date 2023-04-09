@@ -2,7 +2,7 @@
 "style": "/home/tom/.config/waybar/style.css",
 "layer": "top",
 "position": "top",
-"height": 20, // Waybar height (to be removed for auto height)
+"height": 10, // Waybar height (to be removed for auto height)
     "width": 1900, // Waybar width
 "modules-left": [
 "tray",
