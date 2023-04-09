@@ -60,7 +60,7 @@ alias config='/usr/bin/git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
 alias export-key="gpg --export --armor --output exported.key"
 
 # misc
-alias bat="bat --theme='Catppuccin-macchiato'"
+alias bat="bat --theme='Catppuccin-mocha'"
 alias paru="paru --bottomup"
 
 # video2gif() {
