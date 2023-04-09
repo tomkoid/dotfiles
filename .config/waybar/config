@@ -1,5 +1,5 @@
 {
-"style": "/home/tom/.config/waybar/style.css",
+"style": "~/.config/waybar/style.css",
 "layer": "top",
 "position": "top",
 "height": 10, // Waybar height (to be removed for auto height)
