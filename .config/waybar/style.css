@@ -31,7 +31,6 @@
     margin-left: 6px;
 }
 #workspaces button{
-    box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
     background-color: @crust ;
     border-radius: 15px;
     margin-right: 10px;
@@ -44,7 +43,6 @@
 }
 #workspaces button.active{
     padding-top: 7px;
-    box-shadow: rgba(0, 0, 0, 0.288) 2 2 5 2px;
     background: @text;
     background-size: 400% 400%;
 }
