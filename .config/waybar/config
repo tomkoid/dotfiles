@@ -1,23 +1,24 @@
 {
-"style": "~/.config/waybar/style.css",
-"layer": "top",
-"position": "top",
-"height": 10, // Waybar height (to be removed for auto height)
-    "width": 1900, // Waybar width
-"modules-left": [
-"tray",
-"wlr/workspaces"
-],
-"modules-center": [
-"custom/waybar-mpris",
-],
-"modules-right": [
-"custom/clipboard",
-"pulseaudio",
-"battery",
-"clock",
-"network"
-],
+  "style": "~/.config/waybar/style.css",
+  "layer": "top",
+  "position": "top",
+  "height": 10, // Waybar height (to be removed for auto height)
+  "width": 1900, // Waybar width
+  "output": "eDP-1",
+  "modules-left": [
+  "tray",
+  "wlr/workspaces"
+  ],
+  "modules-center": [
+  "custom/waybar-mpris",
+  ],
+  "modules-right": [
+  "custom/clipboard",
+  "pulseaudio",
+  "battery",
+  "clock",
+  "network"
+  ],
 "tray": {
    "padding": 10,
     "spacing": 10,
