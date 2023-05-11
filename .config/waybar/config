@@ -77,7 +77,7 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pamixer -t"
     },
 "clock": {
         "timezone": "CET",
