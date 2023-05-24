@@ -12,3 +12,4 @@ export RUSTC_PROVIDER=sccache
 export EDITOR=nvim # change default editor
 starship init fish | source
 zoxide init fish | source
+source /usr/share/doc/find-the-command/ftc.fish

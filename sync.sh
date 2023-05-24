@@ -3,6 +3,7 @@
 # initalize
 mkdir .themes
 mkdir .config
+mkdir Scripts
 
 # shell things
 cp ~/.zshrc .
@@ -35,3 +36,6 @@ cp -r ~/.config/swaylock .config/
 cp -r ~/.config/sxhkd .config/
 cp -r ~/.config/waybar .config/
 cp ~/.config/starship.toml .config/
+
+# scripts
+cp -r ~/Scripts/* Scripts/

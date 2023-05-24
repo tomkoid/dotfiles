@@ -53,7 +53,7 @@
 },
 
 "custom/clipboard": {
-        "format": "車",
+        "format": "󰐃",
         "return-type": "json",
         // Here "-l top_right -x -15 -y 10" doesn't matter as '-n' mode is used
         // Window position is managed in Hyperland config's windowrulev2
@@ -108,8 +108,7 @@
             "ethernet": "",
             "disconnected": "⚠",
             "wifi": [
-                "睊",
-                "直"
+                " ",
             ]
         },
         "interval": 2

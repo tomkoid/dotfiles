@@ -63,6 +63,12 @@ alias export-key="gpg --export --armor --output exported.key"
 alias bat="bat --theme='Catppuccin-mocha'"
 alias paru="paru --bottomup"
 
+# display image in kitty
+alias img="kitty +kitten icat"
+
+# set wallpaper in wlroots
+alias wl="~/Scripts/wallpaper.sh"
+
 # video2gif() {
 #   ffmpeg -y -i "${1}" -vf fps=${3:-10},scale=${2:-320}:-1:flags=lanczos,palettegen "${1}.png"
 #   ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=${2:-320}:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
