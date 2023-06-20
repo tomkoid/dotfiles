@@ -1,5 +1,5 @@
 # reload .bash_aliases
-alias rl="source ~/.bash_aliases && source ~/.dots"
+alias rl="source ~/.bash_aliases"
 
 # rust replacements
 alias ls="exa -l --git"
@@ -43,6 +43,9 @@ alias gbranch="git branch"
 alias gradd="git remote add"
 alias gpush="git push -u"
 alias grm="git rm --cached"
+alias gnoassumeunchanged="git update-index --no-assume-unchanged"
+alias gassumeunchanged="git update-index --assume-unchanged"
+alias gskipworktree="git update-index --skip-worktree"
 
 # helix
 alias hx="helix"
@@ -62,6 +65,7 @@ alias export-key="gpg --export --armor --output exported.key"
 # misc
 alias bat="bat --theme='Catppuccin-mocha'"
 alias paru="paru --bottomup"
+alias ssh="kitty +kitten ssh"
 
 # display image in kitty
 alias img="kitty +kitten icat"
