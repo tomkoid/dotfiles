@@ -1,7 +1,7 @@
 @import "./mocha.css";
 * {
     border: none;
-    border-radius: 20px;
+    border-radius: 2px;
     font-family: "JetBrains Mono Nerd Font";
     font-size: 20px;
     min-height: 0;
@@ -9,7 +9,7 @@
 
 /*Entire Bar*/
 #waybar {
-  background: transparent;
+  background: @base;
   color: @text;
 }
 /*workspaces*/
@@ -35,8 +35,8 @@
     border-radius: 15px;
     margin-right: 10px;
     padding: 7px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
     padding-top: 7px;
     font-weight: bolder;
     color: 	@scrust ;
@@ -67,7 +67,7 @@ font-size:15px;
 /*systemtray*/
 #tray {
   background-color: transparent;
-  background: @mantle;
+  /* background: @mantle; */
   background-size: 400% 400%;
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
