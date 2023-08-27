@@ -24,3 +24,6 @@ format = ""
 
 [rust]
 format = ""
+
+[bun]
+format = ""
