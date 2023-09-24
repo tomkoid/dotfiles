@@ -33,6 +33,7 @@ cp -r ~/.config/picom .config/
 cp -r ~/.config/polybar .config/
 cp -r ~/.config/rofi .config/
 cp -r ~/.config/swaylock .config/
+cp -r ~/.config/sway .config/
 cp -r ~/.config/sxhkd .config/
 cp -r ~/.config/waybar .config/
 cp ~/.config/starship.toml .config/

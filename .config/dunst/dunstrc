@@ -8,6 +8,7 @@
     alignment=left
     browser = /usr/bin/librewolf -new-tab
     corner_radius = 7
+    follow = keyboard
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.

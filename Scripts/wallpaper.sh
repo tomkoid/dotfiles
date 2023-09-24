@@ -6,16 +6,16 @@ wallpapers="$HOME/Wallpapers"
 if [ "$1" == "r" ]
 then
   recover_wallpaper=$(cat ~/.cache/wallpaper)
-  setsid -f swaybg -i $wallpapers/$recover_wallpaper>/dev/null
+  setsid -f swaybg --mode fit -i $wallpapers/$recover_wallpaper>/dev/null
   exit 0
 fi
 
 set_background() {
   echo $1 > ~/.cache/wallpaper
-  setsid -f swaybg -i $wallpapers/$1>/dev/null
+  setsid -f swaybg --mode fit -i $wallpapers/$1>/dev/null
 } 
 
-background=$(ls $wallpapers | fzf --preview="swaybg -i $wallpapers/{}&>/dev/null" --preview-window=right:0% | xargs -I {} echo {})
+background=$(ls $wallpapers | fzf --preview="swaybg --mode fit -i $wallpapers/{}&>/dev/null" --preview-window=right:0% | xargs -I {} echo {})
 
 # echo $background
 
