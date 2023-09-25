@@ -278,5 +278,7 @@ for_window [app_id=".*"] opacity $opacity
 
 # disable the fucking ugly titlebars
 for_window [class="^.*"] border pixel 2 
+default_border pixel 2 
+default_floating_border pixel 2 
 
 include /etc/sway/config.d/*
