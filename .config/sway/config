@@ -36,6 +36,7 @@ output * bg /home/tom/Wallpapers/Cat-Mocha.png fill
 exec --no-startup-id waybar
 exec --no-startup-id xss-lock --transfer-sleep-lock -- swaylock -f -c 000000
 exec --no-startup-id dunst
+exec --no-startup-id nm-applet
 exec --no-startup-id wlsunset -S 7:00 -s 21:00
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
@@ -46,6 +47,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         timeout 2000 'systemctl suspend' \
          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -207,6 +209,16 @@ input type:keyboard {
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+    
+    # Print screen
+    bindsym Print exec ~/Scripts/wayscr.sh 
+
+# Quick mute
+    bindsym $mod+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Quick connect to my headphones
+    bindsym $mod+Alt+h exec /home/tom/Scripts/jbl-headphones.sh 
+
 #
 # Resizing containers:
 #
@@ -275,6 +287,9 @@ smart_gaps on
 # Set the window opacity for focused and unfocused windows
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
+
+# Follow mouse always
+focus_follows_mouse always
 
 # disable the fucking ugly titlebars
 for_window [class="^.*"] border pixel 2 
