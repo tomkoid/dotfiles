@@ -12,9 +12,6 @@ setsid -f bluetoothctl scan on > /dev/null
 # sleep for a bit
 sleep 5
 
-# stop scanning
-bluetoothctl scan off
-
 # connect to device
 notify-send "JBL Headphones" "Connecting to the device..."
 

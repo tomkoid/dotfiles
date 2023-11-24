@@ -1,10 +1,36 @@
+set EDITOR "nvim"
+
 # reload .bash_aliases
 alias rl="source ~/.bash_aliases"
+
+# NIXOS
+## change package configs
+alias cs="$EDITOR /home/tom/system"
+alias ch="$EDITOR /home/tom/system/home"
+
+## rebuild system and home manager
+alias rs="sudo nixos-rebuild switch --flake /home/tom/system#nixos"
+alias rh="home-manager switch --flake /home/tom/system#tom@tomkoid"
+
+## use nix-shell for trying new things
+alias try="nix-shell --command fish -p"
+
+## quick nix develop 
+alias d="nix develop --command fish"
+
+# run command using distrobox with arch image
+alias archrun="distrobox enter arch --"
+
+# gitea (tea)
+alias newrepo="tea repo create"
 
 # rust replacements
 alias ls="exa -l --git"
 #alias cat="bat"
 alias ps="procs"
+
+# lazygit
+alias lg="lazygit"
 
 # tomkoid-repo
 alias tomkoid-repo-build="export currentdir=$PWD && cd ~/Documents/tomkoid-repo && sh build.sh && cd $currentdir"
@@ -13,7 +39,7 @@ alias tomkoid-repo-build="export currentdir=$PWD && cd ~/Documents/tomkoid-repo 
 alias cl="clear && pfetch"
 
 # use doas instead sudo
-alias sudo="doas"
+#alias sudo="doas"
 
 alias up="yes | sudo pacman -Syyu"
 alias upd="sudo pacman -Sy"

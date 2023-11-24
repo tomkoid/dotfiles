@@ -1,21 +1,25 @@
 set -o pipefail
 
 wallpapers="$HOME/Wallpapers"
+mode="fit"
 
 # recover wallpaper
 if [ "$1" == "r" ]
 then
   recover_wallpaper=$(cat ~/.cache/wallpaper)
-  setsid -f swaybg --mode fit -i $wallpapers/$recover_wallpaper>/dev/null
+  recover_mode=$(cat ~/.cache/wallpaper_mode)
+  setsid -f swaybg --mode $recover_mode -i $wallpapers/$recover_wallpaper>/dev/null
   exit 0
 fi
 
 set_background() {
   echo $1 > ~/.cache/wallpaper
-  setsid -f swaybg --mode fit -i $wallpapers/$1>/dev/null
+  echo $2 > ~/.cache/wallpaper_mode
+  setsid -f swaybg --mode $mode -i $wallpapers/$1>/dev/null
 } 
 
-background=$(ls $wallpapers | fzf --preview="swaybg --mode fit -i $wallpapers/{}&>/dev/null" --preview-window=right:0% | xargs -I {} echo {})
+background=$(ls $wallpapers | fzf --preview="swaybg --mode $mode -i $wallpapers/{}&>/dev/null" --preview-window=right:0% | xargs -I {} echo {})
+mode=$(printf "fit\nfill\nstretch\ncenter\ntile\nmax\n" | fzf --preview="swaybg --mode {} -i $wallpapers/$background&>/dev/null" --preview-window=right:0% | xargs -I {} echo {})
 
 # echo $background
 
@@ -30,5 +34,5 @@ then
   # kill background service
   pkill swaybg
 
-  set_background $background
+  set_background $background $mode
 fi

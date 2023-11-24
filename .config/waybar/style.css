@@ -3,36 +3,41 @@
 * {
   border: none;
   border-radius: 2px;
-  font-family: "JetBrains Mono Nerd Font";
+  font-family: "JetBrains Mono";
   font-size: 20px;
   min-height: 0;
   padding-top: 1px;
   padding-bottom: 1px;
+  color: @text;
 }
 
 /*Entire Bar*/
 #waybar {
-  background: @crust;
+  /* background: @crust; */
   color: @text;
 }
 
 /*workspaces*/
 #workspaces * {
   font-size: 15px;
+  color: blue;
 }
 
 #workspaces button label {
-  color: 	@lavender ;
+  /* color: 	@lavender ; */
+  color: black;
   font-weight: bolder;
 }
 
 #workspaces button.active label {
   color: @base;
+  color: black;
   font-weight: bolder;
 }
 
 #workspaces {
   background-color: transparent;
+  color: @crust;
   /* margin-top: 2px; */
   margin-right: 6px;
   margin-left: 6px;
@@ -45,21 +50,22 @@
   padding-right: 5px;
   padding-left: 5px;
   font-weight: bolder;
-  color: 	@scrust ;
+  color: @crust;
 }
 
 #workspaces button.active {
   background: @text;
   background-size: 400% 400%;
+  color: @crust;
 }
 
 /*waybar-mpris*/
 #custom-waybar-mpris {
-font-size:15px;
+  font-size:15px;
 }
 
 #custom-waybar-mpris {
-   font-size:15px;
+  font-size:15px;
   background-color: transparent;
   color: @teal;
   background: @mantle;
@@ -90,6 +96,7 @@ font-size:15px;
 #custom-clipboard {
   font-size: 15px;
 }
+
 #custom-clipboard {
   background-color: transparent;
   color: @yellow;
@@ -99,11 +106,11 @@ font-size:15px;
   border-bottom-right-radius: 0;
   /* margin-top: 2px; */
   padding-right: 5px;
-  padding-left:30px;
+  padding-left: 30px;
 }
 /*audio*/
 #pulseaudio {
-  font-size:15px;
+  font-size: 15px;
 }
 
 #pulseaudio {
@@ -117,7 +124,7 @@ font-size:15px;
   border-bottom-left-radius: 0;
   /* margin-top: 2px; */
   padding-right: 15px;
-  padding-left:20px;
+  padding-left: 20px;
 }
 
 /*clock*/
@@ -127,7 +134,7 @@ font-size:15px;
 
 #clock label {
   color: @lavender;
-  font-weight:  bolder;
+  font-weight: bolder;
 }
 
 #clock {

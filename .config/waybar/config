@@ -7,28 +7,28 @@
   "output": "eDP-1",
   "modules-left": [
   "tray",
-  "sway/workspaces"
+    "hyprland/workspaces"
   ],
   "modules-center": [
-  "custom/waybar-mpris",
+    "custom/waybar-mpris",
   ],
   "modules-right": [
-  "custom/clipboard",
-  "pulseaudio",
-  "battery",
-  "clock",
-  "network"
+    "custom/clipboard",
+    "pulseaudio",
+    "battery",
+    "clock",
+    "network"
   ],
-"tray": {
-   "padding": 10,
-    "spacing": 10,
-    "icon-size": 16,
-    "icon-margin": 5,
-    "max-icon-size": 20,
-    "scroll": false,
-    "scroll-step": 4,
-    "sort": false,
-},
+  "tray": {
+     "padding": 10,
+      "spacing": 10,
+      "icon-size": 16,
+      "icon-margin": 5,
+      "max-icon-size": 20,
+      "scroll": false,
+      "scroll-step": 4,
+      "sort": false,
+  },
 
 "sway/workspaces": {
         "format": "{name}",
@@ -52,6 +52,17 @@
         "on-scroll-down": "hyprctl dispatch workspace e+1",
         "on-click": "activate"
 
+},
+
+"hyprland/workspaces": {
+  "format": "{icon}",
+  "format-window-separator": "\n",
+  "window-rewrite-default": "",
+  "window-rewrite": {
+    "firefox": "",
+    "foot": "",
+    "code": "󰨞",
+  },
 },
 
 "custom/clipboard": {

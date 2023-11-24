@@ -25,7 +25,8 @@ set $windowopacity 0.9
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/tom/Wallpapers/Cat-Mocha.png fill
+# output * bg /home/tom/Wallpapers/Cat-Mocha.png fill
+output * bg /home/tom/Wallpapers/nix-wallpaper-nineish-dark-gray.png fill
 #
 # Example configuration:
 #
@@ -37,8 +38,7 @@ exec --no-startup-id waybar
 exec --no-startup-id xss-lock --transfer-sleep-lock -- swaylock -f -c 000000
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
-exec --no-startup-id wlsunset -S 7:00 -s 21:00
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id wlsunset -S 7:00 -s 20:00
 
 # XDG fixes
 exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -309,3 +309,5 @@ default_border pixel 2
 default_floating_border pixel 2 
 
 include /etc/sway/config.d/*
+
+exec systemctl --user start graphical-session.target

@@ -27,3 +27,6 @@ format = ""
 
 [bun]
 format = ""
+
+[nix_shell]
+symbol = " "
