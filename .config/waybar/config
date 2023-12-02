@@ -10,7 +10,7 @@
     "hyprland/workspaces"
   ],
   "modules-center": [
-    "custom/waybar-mpris",
+    "mpd",
   ],
   "modules-right": [
     "custom/clipboard",
@@ -105,6 +105,33 @@
         "format-calendar-weekdays": "<span color='#f9e2af'><b>{}</b></span>",
         "interval": 1
     },
+
+"mpd": {
+	"format": "{stateIcon} {consumeIcon} {randomIcon} {repeatIcon}{singleIcon}{artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+	"format-disconnected": "Disconnected ",
+	"format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+	"interval": 1,
+	"consume-icons": {
+		"on": " " // Icon shows only when "consume" is on
+	},
+	"random-icons": {
+		"off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+		"on": " "
+	},
+	"repeat-icons": {
+		"on": " "
+	},
+	"single-icons": {
+		"on": "1 "
+	},
+	"state-icons": {
+		"playing": "",
+		"paused": ""
+	},
+	"tooltip-format": "MPD (connected)",
+	"tooltip-format-disconnected": "MPD (disconnected)",
+  "on-click": "mpc toggle"
+},
 
 "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface

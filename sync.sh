@@ -5,6 +5,8 @@ mkdir .themes
 mkdir .config
 mkdir Scripts
 
+mkdir .config/mpd
+
 # shell things
 cp ~/.zshrc .
 cp ~/.dots .
@@ -36,6 +38,8 @@ cp -r ~/.config/swaylock .config/
 cp -r ~/.config/sway .config/
 cp -r ~/.config/sxhkd .config/
 cp -r ~/.config/waybar .config/
+cp -r ~/.config/mpv .config/
+cp -r ~/.config/mpd/mpd.conf .config/mpd/
 cp ~/.config/starship.toml .config/
 
 # scripts
