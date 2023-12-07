@@ -3,6 +3,7 @@
 # initalize
 mkdir .themes
 mkdir .config
+mkdir .tmux
 mkdir Scripts
 
 mkdir .config/mpd
@@ -34,6 +35,7 @@ cp -r ~/.config/paru .config/
 cp -r ~/.config/picom .config/
 cp -r ~/.config/polybar .config/
 cp -r ~/.config/rofi .config/
+cp -r ~/.config/tmux .config/
 cp -r ~/.config/swaylock .config/
 cp -r ~/.config/sway .config/
 cp -r ~/.config/sxhkd .config/
@@ -41,6 +43,8 @@ cp -r ~/.config/waybar .config/
 cp -r ~/.config/mpv .config/
 cp -r ~/.config/mpd/mpd.conf .config/mpd/
 cp ~/.config/starship.toml .config/
+
+cp -r ~/.tmux .
 
 # scripts
 cp -r ~/Scripts/* Scripts/
