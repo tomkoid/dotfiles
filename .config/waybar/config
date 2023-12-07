@@ -13,7 +13,6 @@
     "mpd"
   ],
   "modules-right": [
-    "custom/clipboard",
     "pulseaudio",
     "battery",
     "clock",
@@ -30,132 +29,134 @@
       "sort": false,
   },
 
-"sway/workspaces": {
-        "format": "{name}",
-        "disable-scroll": true,
-        "sort-by-number": true,
-        "all-outputs": true,
-        "format-icons": {
-                        "1":"A",
-                        "2":"B",
-                        "3":"C",
-                        "4":"D",
-                        "5":"E",
-                        "6":"F",
-                        "7":"G",
-                        "8":"H",
-                        "9":"I",
-                        "10":"J",
-                        "default": "󰕾",
-            },
-        "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1",
-        "on-click": "activate"
-
-},
-
-"hyprland/workspaces": {
-  "format": "{icon}",
-  "format-window-separator": "\n",
-  "window-rewrite-default": "",
-  "window-rewrite": {
-    "firefox": "",
-    "foot": "",
-    "code": "󰨞",
+  "sway/workspaces": {
+    "format": "{name}",
+    "disable-scroll": true,
+    "sort-by-number": true,
+    "all-outputs": true,
+    "format-icons": {
+                    "1":"A",
+                    "2":"B",
+                    "3":"C",
+                    "4":"D",
+                    "5":"E",
+                    "6":"F",
+                    "7":"G",
+                    "8":"H",
+                    "9":"I",
+                    "10":"J",
+                    "default": "󰕾",
+        },
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "on-click": "activate"
   },
-},
 
-"custom/clipboard": {
-        "format": "󰐃",
-        "return-type": "json",
-        // Here "-l top_right -x -15 -y 10" doesn't matter as '-n' mode is used
-        // Window position is managed in Hyperland config's windowrulev2
-        "on-click": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist decode | wl-copy",
-        "on-click-middle": "rm -f ~/.cache/cliphist/db",
-        "on-click-right": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist delete",
-        "escape": true
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-window-separator": "\n",
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "firefox": "",
+      "foot": "",
+      "code": "󰨞",
     },
-"pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%", // {format_source}
-        "format-bluetooth": "{icon} {volume}%", // {format_source}
-        "format-bluetooth-muted": "", // {format_source}
-        "format-muted": "", // {format_source}
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "default": [
-                "",
-                "",
-                ""
-            ]
-        },
-        "on-click": "pamixer -t"
-    },
-"clock": {
-        "timezone": "CET",
-        "format": "  {:%d <small>%a</small> %H:%M}",
-        "format": "  {:%a %b %d %Y | %H:%M}",
-        "format-alt": " {:%A %B %d %Y (%V) | %r}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "calendar-weeks-pos": "right",
-        "today-format": "<span color='#f38ba8'><b><u>{}</u></b></span>",
-        "format-calendar": "<span color='#f2cdcd'><b>{}</b></span>",
-        "format-calendar-weeks": "<span color='#94e2d5'><b>W{:%U}</b></span>",
-        "format-calendar-weekdays": "<span color='#f9e2af'><b>{}</b></span>",
-        "interval": 1
-    },
+  },
 
-"mpd": {
-	"format": "{stateIcon} {consumeIcon} {randomIcon} {repeatIcon}{singleIcon} <span style='italic'>{artist}</span> - {title:.45} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
-	"format-disconnected": "Disconnected ",
-	"format-stopped": "",
-	"interval": 1,
-	"consume-icons": {
-		"on": " " // Icon shows only when "consume" is on
-	},
-	"random-icons": {
-		"off": "",
-		"on": " "
-	},
-	"repeat-icons": {
-		"on": " "
-	},
-	"single-icons": {
-		"on": "1 "
-	},
-	"state-icons": {
-		"playing": "",
-		"paused": ""
-	},
-	"tooltip-format": "MPD (connected)",
-	"tooltip-format-disconnected": "MPD (disconnected)",
-  "on-click": "mpc toggle",
-  "on-scroll-up": "mpc next",
-  "on-scroll-down": "mpc prev"
-},
+  "custom/clipboard": {
+    "format": "󰐃",
+    "return-type": "json",
+    // Here "-l top_right -x -15 -y 10" doesn't matter as '-n' mode is used
+    // Window position is managed in Hyperland config's windowrulev2
+    "on-click": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist decode | wl-copy",
+    "on-click-middle": "rm -f ~/.cache/cliphist/db",
+    "on-click-right": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist delete",
+    "escape": true
+  },
 
-"network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format": " ",
-        "format-disconnected": "{icon} No Internet",
-        "format-linked": " {ifname} (No IP)",
-        "format-alt": "↕ {bandwidthUpBytes} | ↕{bandwidthDownBytes}",
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}  {gwaddr}",
-        "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{icon} {ipaddr}/{cidr}",
-        "tooltip-format-disconnected": "{icon} Disconnected",
-        "on-click-right": "nm-connection-editor",
-        "format-icons": {
-            "ethernet": "",
-            "disconnected": "⚠",
-            "wifi": [
-                " ",
-            ]
-        },
-        "interval": 2
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon} {volume}%", // {format_source}
+    "format-bluetooth": "{icon} {volume}%", // {format_source}
+    "format-bluetooth-muted": "", // {format_source}
+    "format-muted": "", // {format_source}
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+        "default": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "on-click": "pamixer -t"
+  },
+
+  "clock": {
+    "timezone": "Europe/Prague",
+    "format": "  {:%d <small>%a</small> %H:%M}",
+    "format": "  {:%a %d/%m/%y | %H:%M}",
+    "format-alt": " {:%A %B %d %Y (%V) | %r}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar-weeks-pos": "right",
+    "today-format": "<span color='#f38ba8'><b><u>{}</u></b></span>",
+    "format-calendar": "<span color='#f2cdcd'><b>{}</b></span>",
+    "format-calendar-weeks": "<span color='#94e2d5'><b>W{:%U}</b></span>",
+    "format-calendar-weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+    "interval": 1
+  },
+
+  "mpd": {
+    "format": "{stateIcon} {consumeIcon} {randomIcon} {repeatIcon}{singleIcon} <span style='italic'>{artist}</span> - {title:.45} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "",
+    "interval": 1,
+    "consume-icons": {
+      "on": " " // Icon shows only when "consume" is on
+    },
+    "random-icons": {
+      "off": "",
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
+    },
+    "state-icons": {
+      "playing": "",
+      "paused": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)",
+    "on-click": "mpc toggle",
+    "on-scroll-up": "mpc next",
+    "on-scroll-down": "mpc prev"
+  },
+
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format": " ",
+    "format-disconnected": "{icon} No Internet",
+    "format-linked": " {ifname} (No IP)",
+    "format-alt": "↕ {bandwidthUpBytes} | ↕{bandwidthDownBytes}",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}  {gwaddr}",
+    "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{icon} {ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "{icon} Disconnected",
+    "on-click-right": "nm-connection-editor",
+    "format-icons": {
+        "ethernet": "",
+        "disconnected": "⚠",
+        "wifi": [
+            " ",
+        ]
+    },
+    "interval": 2
 
  },
+
  "battery": {
     "bat": "BAT0",
     "interval": 30,
@@ -166,6 +167,6 @@
     "format": "{icon}  {capacity}%",
     "format-icons": ["", "", "", "", ""],
     "max-length": 25
-}
  }
 
+}

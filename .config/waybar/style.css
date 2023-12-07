@@ -3,7 +3,7 @@
 * {
   border: none;
   border-radius: 2px;
-  font-family: "JetBrains Mono";
+  font-family: "JetBrains Mono Nerd Font";
   font-size: 15px;
   min-height: 0;
   padding-top: 1px;
@@ -19,7 +19,7 @@
 
 /*workspaces*/
 #workspaces * {
-  font-size: 15px;
+  /* font-size: 15px; */
   color: blue;
 }
 
@@ -61,11 +61,11 @@
 
 /*waybar-mpris*/
 #custom-waybar-mpris {
-  font-size:15px;
+  /* font-size:15px; */
 }
 
 #custom-waybar-mpris {
-  font-size:15px;
+  /* font-size:15px; */
   background-color: transparent;
   color: @teal;
   background: @mantle;
@@ -84,7 +84,7 @@
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   border-radius: 15px;
-  font-size: 15px;
+  /* font-size: 15px; */
   /* margin-top: 2px; */
   margin-right: 10px;
   margin-left: 25px;
@@ -94,7 +94,7 @@
 }
 
 #custom-clipboard {
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 
 #custom-clipboard {
@@ -110,7 +110,7 @@
 }
 /*audio*/
 #pulseaudio {
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 
 #pulseaudio {
@@ -133,7 +133,7 @@
 
 /*clock*/
 #clock {
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 
 #clock label {
@@ -155,7 +155,7 @@
 }
 
 #network {
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 
 #network {
@@ -173,7 +173,7 @@
 #battery {
   background-color: transparent;
   color: @yellow;
-  font-size: 15px;
+  /* font-size: 15px; */
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   border-top-left-radius: 0;
