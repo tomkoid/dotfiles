@@ -91,7 +91,7 @@ alias export-key="gpg --export --armor --output exported.key"
 # misc
 alias bat="bat --theme='Catppuccin-mocha'"
 alias paru="paru --bottomup"
-alias ssh="kitty +kitten ssh"
+# alias ssh="kitty +kitten ssh"
 
 # display image in kitty
 alias img="kitty +kitten icat"
