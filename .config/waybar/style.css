@@ -2,12 +2,13 @@
 
 * {
   border: none;
-  border-radius: 2px;
   font-family: "JetBrains Mono Nerd Font";
   font-size: 15px;
   min-height: 0;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
   color: @text;
 }
 
@@ -15,17 +16,21 @@
 #waybar {
   /* background: @crust; */
   color: @text;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /*workspaces*/
 #workspaces * {
   /* font-size: 15px; */
   color: blue;
+  padding: 0px;
 }
 
 #workspaces button label {
-  /* color: 	@lavender ; */
-  color: black;
+  color: 	@surface1;
   font-weight: bolder;
 }
 
@@ -36,21 +41,22 @@
 }
 
 #workspaces {
-  background-color: transparent;
-  color: @crust;
+  background-color: @surface0;
   /* margin-top: 2px; */
   margin-right: 6px;
   margin-left: 6px;
+  padding-right: 0px;
 }
 
 #workspaces button {
   background-color: @crust ;
   border-radius: 15px;
   margin-right: 10px;
-  padding-right: 5px;
-  padding-left: 5px;
   font-weight: bolder;
-  color: @crust;
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: @blue;
 }
 
 #workspaces button.active {
@@ -86,8 +92,6 @@
   border-radius: 15px;
   /* font-size: 15px; */
   /* margin-top: 2px; */
-  margin-right: 10px;
-  margin-left: 25px;
   padding: 10px;
   padding-top: 4px;
   padding-bottom: 0px;
@@ -118,17 +122,14 @@
   color: @red;
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
   /* margin-top: 2px; */
-  padding-right: 15px;
-  padding-left: 20px;
+  background-color: @surface0;
+  margin-right: 10px;
 }
 
 #mpd.playing {
   color: @green;
+  background-color: @surface0;
 }
 
 /*clock*/
@@ -142,16 +143,12 @@
 }
 
 #clock {
-  background-color: transparent;
+  background-color: @surface0;
   color: @lavender;
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
   /* margin-top: 2px; */
-  padding-right: 15px;
+  margin-right: 0px;
 }
 
 #network {
@@ -166,8 +163,6 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   /* margin-top: 2px; */
-  padding-right: 20px;
-  margin-right: 10px;
 }
 
 #battery {
@@ -176,10 +171,7 @@
   /* font-size: 15px; */
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
   /* margin-top: 2px; */
-  padding-right: 15px;
+  background-color: @surface0;
+  margin-right: 20px;
 }
