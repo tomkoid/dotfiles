@@ -2,31 +2,35 @@
   "style": "~/.config/waybar/style.css",
   "layer": "top",
   "position": "top",
-  "height": 5, // Waybar height (to be removed for auto height)
+  "height": 0, // Waybar height (to be removed for auto height)
   "width": 1920, // Waybar width
   "output": "eDP-1",
   "modules-left": [
     "tray",
     "hyprland/workspaces",
-  ],
-  "modules-center": [
     "mpd"
   ],
+  "modules-center": [
+  ],
   "modules-right": [
+    "disk",
+    "network",
+    "hyprland/language",
+    "cpu",
+    "memory",
     "pulseaudio",
     "battery",
-    "clock",
-    "network"
+    "clock"
   ],
   "tray": {
-     "padding": 10,
-      "spacing": 10,
-      "icon-size": 16,
-      "icon-margin": 5,
-      "max-icon-size": 20,
-      "scroll": false,
-      "scroll-step": 4,
-      "sort": false,
+    "padding": 10,
+    "spacing": 10,
+    "icon-size": 16,
+    "icon-margin": 5,
+    "max-icon-size": 20,
+    "scroll": false,
+    "scroll-step": 4,
+    "sort": false,
   },
 
   "sway/workspaces": {
@@ -73,7 +77,21 @@
     "on-click-right": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist delete",
     "escape": true
   },
-
+  "hyprland/language": {
+    "format": "󰌌 {}",
+    "format-en": "en",
+    "format-cs": "cz",
+    "keyboard-name": "at-translated-set-2-keyboard"
+  },
+  "cpu": {
+    "interval": 2,
+    "format": " {usage}%",
+    "tooltip": true 
+  },
+  "memory": {
+    "format": " {}%",
+    "tooltip": true
+  },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     "format": "{icon} {volume}%", // {format_source}
@@ -135,13 +153,18 @@
     "on-scroll-down": "mpc prev"
   },
 
+  "disk": {
+    "interval": 15,
+    "format": "󰋊 {free} free",
+    "path": "/"
+  },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format": " ",
-    "format-disconnected": "{icon} No Internet",
-    "format-linked": " {ifname} (No IP)",
-    "format-alt": "↕ {bandwidthUpBytes} | ↕{bandwidthDownBytes}",
-    "tooltip-format": "{ifname}: {ipaddr}/{cidr}  {gwaddr}",
+    "format": "{icon} {essid} ({signalStrength}%)",
+    "format-disconnected": "󰤮 No Internet",
+    "format-linked": "󱚵 {ifname} (No IP)",
+    "format-alt": "↕ {bandwidthUpBytes} | ↕ {bandwidthDownBytes}",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr} 󰩟 {gwaddr}",
     "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "{icon} {ipaddr}/{cidr}",
     "tooltip-format-disconnected": "{icon} Disconnected",
@@ -150,11 +173,14 @@
         "ethernet": "",
         "disconnected": "⚠",
         "wifi": [
-            " ",
+            "󰤨 ",
+            "󰤥 ",
+            "󰤢 ",
+            "󰤟 ",
         ]
     },
-    "interval": 2
-
+    "interval": 2,
+    "max-length": 50
  },
 
  "battery": {

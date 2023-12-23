@@ -3,133 +3,102 @@
 * {
   border: none;
   font-family: "JetBrains Mono Nerd Font";
-  font-size: 15px;
-  min-height: 0;
-  padding: 2px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 15px;
+  font-size: 11pt;
+  /* min-height: 0; */
+  /* padding: 2px; */
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+  /* border-radius: 15px; */
+  margin: 0;
+  padding: 0;
+  padding-top: 1px;
+  padding-bottom: 1px;
   color: @text;
+}
+
+window#waybar {
+  padding-bottom: 100px;
+  padding-top: 100px;
 }
 
 /*Entire Bar*/
 #waybar {
   /* background: @crust; */
   color: @text;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+}
+
+#tray {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /*workspaces*/
-#workspaces * {
-  /* font-size: 15px; */
-  color: blue;
-  padding: 0px;
-}
-
 #workspaces button label {
-  color: 	@surface1;
+  color: 	@surface2;
   font-weight: bolder;
 }
 
 #workspaces button.active label {
   color: @base;
-  color: black;
   font-weight: bolder;
 }
 
 #workspaces {
-  background-color: @surface0;
+  /* background-color: @surface0; */
   /* margin-top: 2px; */
   margin-right: 6px;
   margin-left: 6px;
-  padding-right: 0px;
 }
 
 #workspaces button {
-  background-color: @crust ;
-  border-radius: 15px;
+  background-color: @crust;
   margin-right: 10px;
   font-weight: bolder;
-  padding: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
   color: @blue;
 }
 
 #workspaces button.active {
   background: @text;
-  background-size: 400% 400%;
+  /* background-size: 400% 400%; */
   color: @crust;
 }
 
-/*waybar-mpris*/
-#custom-waybar-mpris {
-  /* font-size:15px; */
-}
-
-#custom-waybar-mpris {
-  /* font-size:15px; */
-  background-color: transparent;
-  color: @teal;
-  background: @mantle;
-  animation: gradient_f 20s ease-in-out infinite;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  /* margin-top: 10px; */
-  margin-bottom: 2px;
-  padding-right: 20px;
-  padding-left:20px;
-}
-/*systemtray*/
-#tray {
-  background-color: transparent;
-  /* background: @mantle; */
-  background-size: 400% 400%;
-  animation: gradient_f 20s ease-in-out infinite;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  border-radius: 15px;
-  /* font-size: 15px; */
-  /* margin-top: 2px; */
-  padding: 10px;
-  padding-top: 4px;
-  padding-bottom: 0px;
-}
-
-#custom-clipboard {
-  /* font-size: 15px; */
-}
-
-#custom-clipboard {
-  background-color: transparent;
-  color: @yellow;
-  animation: gradient_f 20s ease-in-out infinite;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  /* margin-top: 2px; */
-  padding-right: 5px;
-  padding-left: 30px;
-}
-/*audio*/
-#pulseaudio {
-  /* font-size: 15px; */
-}
-
-#pulseaudio {
-  background-color: transparent;
-  color: @red;
-  animation: gradient_f 20s ease-in-out infinite;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-  /* margin-top: 2px; */
-  background-color: @surface0;
-  margin-right: 10px;
+#mpd {
+  margin-left: 20px;
 }
 
 #mpd.playing {
   color: @green;
-  background-color: @surface0;
+}
+
+#disk {
+  color: @maroon;
+  margin-right: 15px;
+}
+
+#language {
+  color: @mauve;
+  margin-right: 15px;
+}
+
+#cpu {
+  color: @green;
+  margin-right: 15px;
+}
+
+#memory {
+  color: @blue;
+  margin-right: 15px;
+}
+
+#pulseaudio {
+  color: @red;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  /* margin-top: 2px; */
+  margin-right: 15px;
 }
 
 /*clock*/
@@ -143,20 +112,18 @@
 }
 
 #clock {
-  background-color: @surface0;
   color: @lavender;
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   /* margin-top: 2px; */
-  margin-right: 0px;
+  margin-right: 15px;
 }
 
 #network {
-  /* font-size: 15px; */
+  margin-right: 15px;
 }
 
 #network {
-  background-color: transparent;
   color: @sapphire;
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
@@ -166,12 +133,10 @@
 }
 
 #battery {
-  background-color: transparent;
   color: @yellow;
   /* font-size: 15px; */
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   /* margin-top: 2px; */
-  background-color: @surface0;
   margin-right: 20px;
 }
