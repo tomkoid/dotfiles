@@ -5,6 +5,8 @@ mkdir .themes
 mkdir .config
 mkdir .tmux
 mkdir Scripts
+mkdir root/etc
+mkdir -p root/usr/{share,lib}
 
 mkdir .config/mpd
 
@@ -48,3 +50,11 @@ cp -r ~/.tmux .
 
 # scripts
 cp -r ~/Scripts/* Scripts/
+
+# sync something in etc
+cp -r /etc/udev root/etc/
+cp -r /etc/sddm root/etc/
+
+# sync something in lib
+mkdir root/usr/lib/sddm
+cp -r /usr/lib/sddm/sddm.conf.d root/usr/lib/sddm/
