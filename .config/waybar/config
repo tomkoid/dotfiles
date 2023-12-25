@@ -4,7 +4,7 @@
   "position": "top",
   "height": 0, // Waybar height (to be removed for auto height)
   "width": 1920, // Waybar width
-  "output": "eDP-1",
+  "output": "HDMI-A-1",
   "modules-left": [
     "tray",
     "hyprland/workspaces",
