@@ -148,6 +148,7 @@
     },
     "tooltip-format": "MPD (connected)",
     "tooltip-format-disconnected": "MPD (disconnected)",
+    "max-length": 100,
     "on-click": "mpc toggle",
     "on-scroll-up": "mpc next",
     "on-scroll-down": "mpc prev"
