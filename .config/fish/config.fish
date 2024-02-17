@@ -11,7 +11,7 @@ source ~/.bash_aliases
 export RUSTC_PROVIDER=sccache
 export EDITOR=nvim # change default editor
 starship init fish | source
-zoxide init fish | source
+zoxide init --cmd cd fish | source
 # [ -f /usr/share/autojump/autojump.fish ]; and source /usr/share/autojump/autojump.fish
 # source /usr/share/doc/find-the-command/ftc.fish
 
