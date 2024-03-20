@@ -3,9 +3,7 @@
   "layer": "top",
   "position": "top",
   "height": 0, // Waybar height (to be removed for auto height)
-  "width": 1920, // Waybar width
-  "output": "HDMI-A-1",
-  "output": "eDP-1",
+  "output": ["HDMI-A-1", "eDP-1"],
   "modules-left": [
     "tray",
     "hyprland/workspaces",
@@ -163,6 +161,7 @@
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format": "{icon} {essid} ({signalStrength}%)",
+    "format-ethernet": "{icon} ",
     "format-disconnected": "󰤮 No Internet",
     "format-linked": "󱚵 {ifname} (No IP)",
     "format-alt": "↕ {bandwidthUpBytes} | ↕ {bandwidthDownBytes}",
@@ -172,7 +171,7 @@
     "tooltip-format-disconnected": "{icon} Disconnected",
     "on-click-right": "nm-connection-editor",
     "format-icons": {
-        "ethernet": "",
+        "ethernet": "󰈀",
         "disconnected": "⚠",
         "wifi": [
             "󰤨 ",

@@ -10,7 +10,7 @@ if [ "$1" == "r" ]
 then
   recover_wallpaper=$(cat ~/.cache/wallpaper)
   recover_mode=$(cat ~/.cache/wallpaper_mode)
-  setsid -f swaybg --mode $recover_mode -i $wallpapers/$recover_wallpaper>/dev/null
+  setsid -f swaybg -i $wallpapers/$recover_wallpaper --mode $recover_mode>/dev/null
   exit 0
 fi
 

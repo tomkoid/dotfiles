@@ -3,13 +3,14 @@
 # end
 
 # PATH
-export PATH="$HOME/.local/bin:$HOME/.cargo/bin:/opt/xtensa-lx106-elf-gcc/bin:$HOME/go/bin:$HOME/.surrealdb:$PATH"
+export PATH="/usr/bin:/usr/sbin:/usr/local/bin:$HOME/.local/bin:$HOME/.cargo/bin:/opt/xtensa-lx106-elf-gcc/bin:$HOME/go/bin:$HOME/.surrealdb:$PATH"
 
 source ~/.bash_aliases
 # fish_add_path /home/tom/.spicetify
 
 export RUSTC_PROVIDER=sccache
 export EDITOR=nvim # change default editor
+# export SSH_ASKPASSWORD='' # dont use the old ass 1955 x11 program
 starship init fish | source
 zoxide init --cmd cd fish | source
 # [ -f /usr/share/autojump/autojump.fish ]; and source /usr/share/autojump/autojump.fish

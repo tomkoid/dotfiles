@@ -19,6 +19,16 @@ disabled = true
 [package]
 disabled = true
 
+[nix_shell]
+symbol = " "
+# disabled = true 
+impure_msg = '[NS](bold blue)'
+# format = '[$symbol]($style) '
+format = '[$state]($style) '
+
+[python]
+format = '[(\($virtualenv\) )]($style)'
+
 [lua]
 format = ""
 
@@ -27,6 +37,3 @@ format = ""
 
 [bun]
 format = ""
-
-[nix_shell]
-symbol = " "

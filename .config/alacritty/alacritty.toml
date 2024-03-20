@@ -1,0 +1,42 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[colors]
+transparent_background_colors = true
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrains Mono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "SemiBold"
+
+[font.offset]
+x = 1
+y = -1 
+
+[cursor.style]
+shape = "Beam"
+
+
+[shell]
+program = "fish"
+
+[window]
+dynamic_padding = true
+dynamic_title = true
+opacity = 1.0 
+title = "Terminal"

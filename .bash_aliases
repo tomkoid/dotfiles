@@ -3,6 +3,9 @@ set EDITOR "nvim"
 # reload .bash_aliases
 alias rl="source ~/.bash_aliases"
 
+# launch zellij
+alias zj="zellij"
+
 # NIXOS
 ## change package configs
 alias cs="$EDITOR /home/tom/system"
@@ -19,7 +22,7 @@ alias try="nix-shell --command fish -p"
 alias d="nix develop --command fish"
 
 # run command using distrobox with arch image
-alias archrun="distrobox enter arch --"
+alias archrun="distrobox enter archlinux --"
 
 # gitea (tea)
 alias newrepo="tea repo create"
@@ -74,7 +77,7 @@ alias gassumeunchanged="git update-index --assume-unchanged"
 alias gskipworktree="git update-index --skip-worktree"
 
 # helix
-alias hx="helix"
+# alias hx="helix"
 
 # mpv
 alias play-yt='mpv --no-config --script-opts=ytdl_hook-ytdl_path=yt-dlp --msg-level=all=no,ytdl_hook=trace --ytdl-format=22'
