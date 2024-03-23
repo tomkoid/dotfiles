@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-output=$(playerctl status)
+output=$(playerctl status -a | grep "Playing")
 
 # Suspend only if nothing is playing
-if [ $output == "No players found" ] || [ $output == "Stopped" ] || [ $output == "Paused" ]; then
+if [ -z "$output" ]; then
   systemctl suspend
 fi
