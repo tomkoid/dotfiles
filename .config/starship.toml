@@ -35,5 +35,9 @@ format = ""
 [rust]
 format = ""
 
+[golang]
+# long delay
+disabled = true
+
 [bun]
 format = ""
