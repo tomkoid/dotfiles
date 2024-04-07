@@ -1,9 +1,9 @@
 set -o pipefail
 
 wallpapers="$HOME/Wallpapers"
-# mode="fit"
+mode="fill"
 
-wallpaper_command="swww img --transition-type wave --transition-angle 120 --transition-step 30 "
+wallpaper_command="swaybg -m fill -i"
 
 # recover wallpaper
 if [ "$1" == "r" ]
@@ -20,6 +20,9 @@ set_background() {
   # setsid -f swaybg --mode $mode -i $wallpapers/$1>/dev/null
   setsid -f $wallpaper_command $wallpapers/$1>/dev/null
 } 
+
+pkill swww
+pkill swaybg
 
 # background=$(ls $wallpapers | fzf --preview="swaybg --mode $mode -i $wallpapers/{}&>/dev/null" --preview-window=right:0% | xargs -I {} echo {})
 background=$(ls $wallpapers | fzf --preview="$wallpaper_command $wallpapers/{}&>/dev/null" --preview-window=right:0% | xargs -I {} echo {})
