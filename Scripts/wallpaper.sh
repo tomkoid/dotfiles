@@ -11,7 +11,7 @@ if [ "$1" == "r" ]
 then
   recover_wallpaper=$(cat ~/.cache/wallpaper)
   recover_mode=$(cat ~/.cache/wallpaper_mode)
-  setsid -f swaybg -i $wallpapers/$recover_wallpaper --mode $recover_mode>/dev/null
+  setsid -f swaybg -i "$wallpapers/$recover_wallpaper" --mode $recover_mode>/dev/null
   exit 0
 fi
 
@@ -19,7 +19,7 @@ set_background() {
   echo $1 > ~/.cache/wallpaper
   echo $2 > ~/.cache/wallpaper_mode
   # setsid -f swaybg --mode $mode -i $wallpapers/$1>/dev/null
-  setsid -f $wallpaper_command $wallpapers/$1>/dev/null
+  setsid -f $wallpaper_command "$wallpapers/$1">/dev/null
 } 
 
 pkill swww
@@ -42,5 +42,5 @@ then
   # kill background service
   pkill swaybg
 
-  set_background $background $mode
+  set_background "$background" $mode
 fi
