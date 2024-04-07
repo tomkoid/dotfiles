@@ -5,7 +5,7 @@ wallpapers="$HOME/Wallpapers"
 mode="fill"
 
 get_wallpapers () {
-  listed_wallpapers=$(fd --full-path $wallpapers -e png -e jpg -e webp -e jpeg --color never)
+  listed_wallpapers=$(fd -L --full-path $wallpapers -e png -e jpg -e webp -e jpeg --color never -d 5)
 
   fmt_wallpapers=""
 
