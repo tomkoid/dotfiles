@@ -3,7 +3,7 @@
 # end
 
 # PATH
-export PATH="/usr/bin:/usr/sbin:/usr/local/bin:$HOME/.local/bin:$HOME/.cargo/bin:/opt/xtensa-lx106-elf-gcc/bin:$HOME/go/bin:$HOME/.surrealdb:$PATH"
+export PATH="/usr/bin:/usr/sbin:/usr/local/bin:$HOME/.local/bin:$HOME/.cargo/bin:/opt/xtensa-lx106-elf-gcc/bin:$HOME/go/bin:$HOME/.surrealdb:$HOME/.fly/bin:$PATH"
 
 source ~/.bash_aliases
 # fish_add_path /home/tom/.spicetify
