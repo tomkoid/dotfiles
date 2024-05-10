@@ -40,16 +40,20 @@ config.default_cursor_style = "SteadyBar"
 config.default_prog = { "/bin/fish" }
 
 config.font = wezterm.font_with_fallback({
-	{ family = "JetBrainsMono Nerd Font", weight = "Regular" },
+	{ family = "FiraCode Nerd Font", weight = "Regular" },
 	{ family = "Font Awesome 6 Free", weight = "Black", stretch = "Normal", style = "Normal" },
 	"Noto Serif",
 })
 
 config.font_size = 13.0
 
-config.front_end = "WebGpu"
+config.cell_width = 0.9
 
-config.window_decorations = "RESIZE"
+config.enable_wayland = true
+
+-- config.front_end = "WebGpu"
+
+-- config.window_decorations = "RESIZE"
 
 -- Set mouse bindings
 config.mouse_bindings = {
