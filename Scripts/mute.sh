@@ -4,12 +4,19 @@
 pamixer -t 
 
 # If MPD has playback status of "playing", pause it
-if [ "$(mpc status | wc -l)" != "1" ]; then
+# if [ "$(mpc status | wc -l)" != "1" ]; then
   # If the device is muted, pause mpd
-  if [ "$(pamixer --get-mute)" = "true" ]; then
+if [ "$(pamixer --get-mute)" = "true" ]; then
+  playerctl pause
+
+  if [ "$(mpc status | wc -l)" != "1" ]; then
     mpc pause
-  else
+  fi
+else
+  playerctl play 
+  if [ "$(mpc status | wc -l)" != "1" ]; then
     mpc play
   fi
 fi
+# fi
 
