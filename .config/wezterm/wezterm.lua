@@ -37,7 +37,7 @@ config.xcursor_theme = "Adwaita"
 config.default_cursor_style = "SteadyBar"
 
 -- Set default shell
-config.default_prog = { "/bin/fish" }
+config.default_prog = { "/bin/zsh" }
 
 config.font = wezterm.font_with_fallback({
 	{ family = "FiraCode Nerd Font", weight = "Regular" },
