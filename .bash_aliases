@@ -16,10 +16,10 @@ alias rs="sudo nixos-rebuild switch --flake /home/tom/system#nixos"
 alias rh="home-manager switch --flake /home/tom/system#tom@tomkoid"
 
 ## use nix-shell for trying new things
-alias try="nix-shell --command fish -p"
+alias try="nix-shell --command zsh -p"
 
 ## quick nix develop 
-alias d="nix develop --command fish"
+alias d="nix develop --command zsh"
 
 # run command using distrobox with arch image
 alias archrun="distrobox enter archlinux --"
