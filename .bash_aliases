@@ -28,7 +28,7 @@ alias archrun="distrobox enter archlinux --"
 alias newrepo="tea repo create"
 
 # rust replacements
-alias ls="eza -l --git"
+alias ls="eza -l"
 #alias cat="bat"
 alias ps="procs"
 
