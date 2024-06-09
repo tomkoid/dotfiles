@@ -22,14 +22,14 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   [[blocks.segments]]
     type = 'git'
     style = 'plain'
-    foreground = 'p:grey'
+    foreground = 'p:branch_foreground'
     background = 'transparent'
     template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
 
     [blocks.segments.properties]
       branch_icon = ''
       commit_icon = '@'
-      fetch_status = true
+      fetch_status = true 
 
 [[blocks]]
   type = 'rprompt'
@@ -43,12 +43,12 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     template = '{{ .FormattedMs }}'
 
     [blocks.segments.properties]
-      threshold = 5000
+      threshold = 500
 
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
-  newline = true
+  # newline = true
 
   [[blocks.segments]]
     type = 'text'
@@ -58,7 +58,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
       "{{if eq .Code 0}}magenta{{end}}",
     ]
     background = 'transparent'
-    template = '❯'
+    template = ' ❯'
 
 [transient_prompt]
   foreground_templates = [
@@ -72,3 +72,6 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   foreground = 'magenta'
   background = 'transparent'
   template = '❯❯ '
+
+[palette]
+branch_foreground = "#6c7086"
