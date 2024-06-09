@@ -11,8 +11,11 @@ source ~/.bash_aliases
 export RUSTC_PROVIDER=sccache
 export EDITOR=nvim # change default editor
 # export SSH_ASKPASSWORD='' # dont use the old ass 1955 x11 program
+
 starship init fish | source
+enable_transience
 zoxide init --cmd cd fish | source
+fzf --fish | source
 # [ -f /usr/share/autojump/autojump.fish ]; and source /usr/share/autojump/autojump.fish
 # source /usr/share/doc/find-the-command/ftc.fish
 
