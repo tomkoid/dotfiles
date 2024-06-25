@@ -25,15 +25,14 @@ family = "JetBrainsMono Nerd Font"
 style = "SemiBold"
 
 [font.offset]
-x = 1
-y = -1 
+x = 0 
+y = 0 
 
 [cursor.style]
 shape = "Beam"
 
-
 [shell]
-program = "fish"
+program = "zsh"
 
 [window]
 dynamic_padding = true
