@@ -1,4 +1,5 @@
 set EDITOR "nvim"
+NIX_SHELL="zsh"
 
 # reload .bash_aliases
 alias rl="source ~/.bash_aliases"
@@ -16,10 +17,13 @@ alias rs="sudo nixos-rebuild switch --flake /home/tom/system#nixos"
 alias rh="home-manager switch --flake /home/tom/system#tom@tomkoid"
 
 ## use nix-shell for trying new things
-alias try="nix-shell --command zsh -p"
+alias try=nix_try_pkg
+
+## run any command
+alias t=nix_run_pkg
 
 ## quick nix develop 
-alias d="nix develop --command zsh"
+alias d="nix develop --command $NIX_SHELL"
 
 # run command using distrobox with arch image
 alias archrun="distrobox enter archlinux --"
@@ -107,3 +111,11 @@ alias wl="~/Scripts/wallpaper.sh"
 #   ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=${2:-320}:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
 #   rm "${1}.png"
 # }
+
+nix_try_pkg() {
+	nix shell nixpkgs#$1 --command $NIX_SHELL 
+}
+
+nix_run_pkg() {
+	nix run nixpkgs#$1
+}
