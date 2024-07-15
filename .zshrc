@@ -90,6 +90,13 @@ alias c='clear'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(atuin init zsh)"
+
+# If on NixOS
+if [[ "$(cat /etc/os-release | grep '^ID=' | tr '=' '\n' | tail -n 1)" == "nixos" ]]
+then
+    eval "$(direnv hook zsh)"
+fi
 
 source ~/.bash_aliases
 
