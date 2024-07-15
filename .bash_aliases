@@ -13,8 +13,11 @@ alias cs="$EDITOR /home/tom/system"
 alias ch="$EDITOR /home/tom/system/home"
 
 ## rebuild system and home manager
-alias rs="sudo nixos-rebuild switch --flake /home/tom/system#nixos"
-alias rh="home-manager switch --flake /home/tom/system#tom@tomkoid"
+alias rs="sudo nixos-rebuild switch --flake /home/tom/system#tomkoid --show-trace --max-jobs 100"
+# alias rh="home-manager switch --flake /home/tom/system#tom@tomkoid"
+
+## create new devshell flake
+alias newflake="nix flake new -t github:nix-community/nix-direnv"
 
 ## use nix-shell for trying new things
 alias try=nix_try_pkg
@@ -24,6 +27,9 @@ alias t=nix_run_pkg
 
 ## quick nix develop 
 alias d="nix develop --command $NIX_SHELL"
+
+# spawn a new shell in arch container
+alias arch="distrobox enter archlinux -- $NIX_SHELL"
 
 # run command using distrobox with arch image
 alias archrun="distrobox enter archlinux --"
