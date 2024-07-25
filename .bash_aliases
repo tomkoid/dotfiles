@@ -13,7 +13,7 @@ alias cs="$EDITOR /home/tom/system"
 alias ch="$EDITOR /home/tom/system/home"
 
 ## rebuild system and home manager
-alias rs="sudo nixos-rebuild switch --flake /home/tom/system#tomkoid --show-trace --max-jobs 100"
+alias rs="sudo nixos-rebuild switch --flake /home/tom/system#netherite --show-trace --max-jobs 100"
 # alias rh="home-manager switch --flake /home/tom/system#tom@tomkoid"
 
 ## create new devshell flake
