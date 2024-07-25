@@ -1,6 +1,9 @@
 export PATH=$PATH:~/.local/bin:~/go/bin
 export EDITOR=nvim
 
+# most cool nmtui
+export NEWT_COLORS='root=black,black;window=black,black;border=white,black;listbox=white,black;label=blue,black;checkbox=red,black;title=green,black;button=white,red;actsellistbox=white,red;actlistbox=white,gray;compactbutton=white,gray;actcheckbox=white,blue;entry=lightgray,black;textbox=blue,black'
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -88,14 +91,31 @@ alias vim='nvim'
 alias c='clear'
 
 # Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-eval "$(atuin init zsh)"
+if [ "$(command -v fzf)" ]
+then
+    eval "$(fzf --zsh)"
+fi
+
+if [ "$(command -v zoxide)" ]
+then
+    eval "$(zoxide init --cmd cd zsh)"
+fi
+
+if [ "$(command -v atuin)" ]
+then
+    eval "$(atuin init zsh)"
+fi
 
 # If on NixOS
 if [[ "$(cat /etc/os-release | grep '^ID=' | tr '=' '\n' | tail -n 1)" == "nixos" ]]
 then
     eval "$(direnv hook zsh)"
+fi
+
+# Use kitten ssh if on kitty
+if [[ "${TERM}" == "xterm-kitty" ]]
+then
+    alias ssh="kitten ssh"
 fi
 
 source ~/.bash_aliases
