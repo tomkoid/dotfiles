@@ -29,7 +29,7 @@ config.window_padding = {
 }
 
 -- Set window opacity
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.85
 
 config.xcursor_theme = "Adwaita"
 
@@ -40,16 +40,17 @@ config.default_cursor_style = "SteadyBar"
 config.default_prog = { "zsh" }
 
 config.font = wezterm.font_with_fallback({
-	{ family = "FiraCode Nerd Font", weight = "Regular" },
+	{ family = "JetBrains Mono Nerd Font", weight = "Regular" },
 	{ family = "Font Awesome 6 Free", weight = "Black", stretch = "Normal", style = "Normal" },
 	"Noto Serif",
 })
 
 config.font_size = 13.0
 
-config.cell_width = 0.9
+-- config.cell_width = 0.9
+config.cell_width = 1.0
 
-config.enable_wayland = true
+config.enable_wayland = false
 
 -- config.front_end = "WebGpu"
 
