@@ -26,7 +26,7 @@ set $windowopacity 0.9
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /home/tom/Wallpapers/Cat-Mocha.png fill
-output * bg /home/tom/Wallpapers/nix-wallpaper-nineish-dark-gray.png fill
+output * bg /home/tom/Wallpapers/simple/itjustworks.png fill
 #
 # Example configuration:
 #
