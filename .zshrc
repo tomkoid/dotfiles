@@ -1,4 +1,4 @@
-export PATH=$PATH:~/.local/bin:~/go/bin
+export PATH=$PATH:~/.local/bin:~/go/bin:~/.bun/bin:/opt/flutter/bin
 export EDITOR=nvim
 
 # most cool nmtui
