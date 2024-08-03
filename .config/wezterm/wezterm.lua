@@ -50,7 +50,7 @@ config.font_size = 13.0
 -- config.cell_width = 0.9
 config.cell_width = 1.0
 
-config.enable_wayland = false
+config.enable_wayland = true
 
 -- config.front_end = "WebGpu"
 
