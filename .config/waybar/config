@@ -110,7 +110,6 @@
   },
 
   "clock": {
-    "timezone": "Europe/Prague",
     "format": "  {:%d <small>%a</small> %H:%M}",
     "format": "  {:%a %d/%m/%y | %H:%M}",
     "format-alt": " {:%A %B %d %Y (%V) | %r}",
