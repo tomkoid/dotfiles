@@ -5,11 +5,12 @@
 #: kitty has very powerful font management. You can configure
 #: individual font faces and even specify special fonts for particular
 #: characters.
-
-font_family      JetBrainsMono NFM Regular
-bold_font        JetBrainsMono NFM Bold
-italic_font      auto
-bold_italic_font auto
+# font_family      MesloLGL Nerd Font
+# font_family      JetBrainsMono NFM Light 
+# font_family      FiraCode Nerd Font
+# bold_font        auto
+# italic_font      auto
+# bold_italic_font auto
 
 #: You can specify different fonts for the bold/italic/bold-italic
 #: variants. To get a full list of supported fonts use the `kitty
@@ -24,7 +25,7 @@ bold_italic_font auto
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 11.0
+font_size 13.0
 
 #: Font size (in pts)
 
@@ -48,7 +49,7 @@ force_ltr no
 #: LTR, which FriBidi expects for terminals.
 
 adjust_line_height  0
-adjust_column_width 0
+adjust_column_width 0 
 
 #: Change the size of each character cell kitty renders. You can use
 #: either numbers, which are interpreted as pixels or percentages
@@ -181,8 +182,7 @@ box_drawing_scale 0.001, 1, 1.5, 2
 #: }}}
 
 #: Cursor customization {{{
-
-cursor #cccccc
+# cursor #cccccc
 
 #: Default cursor color. If set to the special value none the cursor
 #: will be rendered with a "reverse video" effect. It's color will be
@@ -191,8 +191,7 @@ cursor #cccccc
 #: program running in the terminal sets a cursor color, this takes
 #: precedence. Also, the cursor colors are modified if the cell
 #: background and foreground colors have very low contrast.
-
-cursor_text_color #d8dee9
+# cursor_text_color #d8dee9
 
 #: The color of text under the cursor. If you want it rendered with
 #: the background color of the cell underneath instead, use the
@@ -291,7 +290,7 @@ wheel_scroll_min_lines 1
 #: when using the wheel. With a negative number, the minimum number of
 #: lines will always be added.
 
-touch_scroll_multiplier 1.0
+touch_scroll_multiplier 6.0
 
 #: Multiplier for the number of lines scrolled by a touchpad. Note
 #: that this is only used for high precision scrolling devices on
@@ -310,8 +309,7 @@ mouse_hide_wait 3.0
 #: typing text. Disabled by default on macOS as getting it to work
 #: robustly with the ever-changing sea of bugs that is Cocoa is too
 #: much effort.
-
-url_color #0087bd
+# url_color #0087bd
 url_style curly
 
 #: The color and style for highlighting URLs on mouse-over. url_style
@@ -609,7 +607,7 @@ sync_to_monitor yes
 
 #: Terminal bell {{{
 
-enable_audio_bell yes
+enable_audio_bell no 
 
 #: The audio bell. Useful to disable it in environments that require
 #: silence.
@@ -618,8 +616,7 @@ visual_bell_duration 0.0
 
 #: The visual bell duration (in seconds). Flash the screen when a bell
 #: occurs for the specified number of seconds. Set to zero to disable.
-
-visual_bell_color none
+# visual_bell_color none
 
 #: The color used by visual bell. Set to none will fall back to
 #: selection background color. If you feel that the visual bell is too
@@ -730,17 +727,14 @@ placement_strategy center
 #: this option. Using a value of center means the cell area will be
 #: placed centrally. A value of top-left means the padding will be
 #: only at the bottom and right edges.
-
-active_border_color #00ff00
+# active_border_color #00ff00
 
 #: The color for the border of the active window. Set this to none to
 #: not draw borders around the active window.
-
-inactive_border_color #cccccc
+# inactive_border_color #cccccc
 
 #: The color for the border of inactive windows.
-
-bell_border_color #ff5a00
+# bell_border_color #ff5a00
 
 #: The color for the border of inactive windows in which a bell has
 #: occurred.
@@ -810,7 +804,7 @@ visual_window_select_characters 1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
 #: insensitive, from the set [0-9A-Z]. Specify your preference as a
 #: string of characters.
 
-confirm_os_window_close -1
+confirm_os_window_close 0 
 
 #: Ask for confirmation when closing an OS window or a tab with at
 #: least this number of kitty windows in it by window manager (e.g.
@@ -941,22 +935,19 @@ active_tab_title_template none
 
 #: Template to use for active tabs. If not specified falls back to
 #: tab_title_template.
-
-active_tab_foreground   #000
-active_tab_background   #eee
+# active_tab_foreground   #000
+# active_tab_background   #eee
 active_tab_font_style   bold-italic
-inactive_tab_foreground #444
-inactive_tab_background #999
+# inactive_tab_foreground #444
+# inactive_tab_background #999
 inactive_tab_font_style normal
 
 #: Tab bar colors and styles.
-
-tab_bar_background none
+# tab_bar_background none
 
 #: Background color for the tab bar. Defaults to using the terminal
 #: background color.
-
-tab_bar_margin_color none
+# tab_bar_margin_color none
 
 #: Color for the tab bar margin area. Defaults to using the terminal
 #: background color.
@@ -964,144 +955,133 @@ tab_bar_margin_color none
 #: }}}
 
 #: Color scheme {{{
+#
+background_opacity 0.90
+# dynamic_background_opacity yes
 
 # The basic colors
-foreground              #CDD6F4
-background              #1E1E2E
-selection_foreground    #1E1E2E
-selection_background    #F5E0DC
+# foreground              #CDD6F4
+# background              #1E1E2E
+# selection_foreground    #1E1E2E
+# selection_background    #F5E0DC
 
 # Cursor colors
-cursor                  #F5E0DC
-cursor_text_color       #1E1E2E
+# cursor                  #F5E0DC
+# cursor_text_color       #1E1E2E
 
 # URL underline color when hovering with mouse
-url_color               #F5E0DC
+# url_color               #F5E0DC
 
 # Kitty window border colors
-active_border_color     #B4BEFE
-inactive_border_color   #6C7086
-bell_border_color       #F9E2AF
+# active_border_color     #B4BEFE
+# inactive_border_color   #6C7086
+# bell_border_color       #F9E2AF
 
 # OS Window titlebar colors
-wayland_titlebar_color system
-macos_titlebar_color system
+# wayland_titlebar_color system
+# macos_titlebar_color system
 
 # Tab bar colors
-active_tab_foreground   #11111B
-active_tab_background   #CBA6F7
-inactive_tab_foreground #CDD6F4
-inactive_tab_background #181825
-tab_bar_background      #11111B
+# active_tab_foreground   #11111B
+# active_tab_background   #CBA6F7
+# inactive_tab_foreground #CDD6F4
+# inactive_tab_background #181825
+# tab_bar_background      #11111B
 
 # Colors for marks (marked text in the terminal)
-mark1_foreground #1E1E2E
-mark1_background #B4BEFE
-mark2_foreground #1E1E2E
-mark2_background #CBA6F7
-mark3_foreground #1E1E2E
-mark3_background #74C7EC
+# mark1_foreground #1E1E2E
+# mark1_background #B4BEFE
+# mark2_foreground #1E1E2E
+# mark2_background #CBA6F7
+# mark3_foreground #1E1E2E
+# mark3_background #74C7EC
 
 # The 16 terminal colors
 
 # black
-color0 #45475A
-color8 #585B70
+# color0 #45475A
+# color8 #585B70
 
 # red
-color1 #F38BA8
-color9 #F38BA8
+# color1 #F38BA8
+# color9 #F38BA8
 
 # green
-color2  #A6E3A1
-color10 #A6E3A1
+# color2  #A6E3A1
+# color10 #A6E3A1
 
 # yellow
-color3  #F9E2AF
-color11 #F9E2AF
+# color3  #F9E2AF
+# color11 #F9E2AF
 
 # blue
-color4  #89B4FA
-color12 #89B4FA
+# color4  #89B4FA
+# color12 #89B4FA
 
 # magenta
-color5  #F5C2E7
-color13 #F5C2E7
+# color5  #F5C2E7
+# color13 #F5C2E7
 
 # cyan
-color6  #94E2D5
-color14 #94E2D5
+# color6  #94E2D5
+# color14 #94E2D5
 
 # white
-color7  #BAC2DE
-color15 #A6ADC8
+# color7  #BAC2DE
+# color15 #A6ADC8
 #: The color table {{{
 
 #: The 256 terminal colors. There are 8 basic colors, each color has a
 #: dull and bright version, for the first 16 colors. You can set the
 #: remaining 240 colors as color16 to color255.
-
-color0 #000000
-color8 #767676
+# color0 #000000
+# color8 #767676
 
 #: black
-
-color1 #cc0403
-color9 #f2201f
+# color1 #cc0403
+# color9 #f2201f
 
 #: red
-
-color2  #19cb00
-color10 #23fd00
+# color2  #19cb00
+# color10 #23fd00
 
 #: green
-
-color3  #cecb00
-color11 #fffd00
+# color3  #cecb00
+# color11 #fffd00
 
 #: yellow
-
-color4  #0d73cc
-color12 #1a8fff
+# color4  #0d73cc
+# color12 #1a8fff
 
 #: blue
-
-color5  #cb1ed1
-color13 #fd28ff
+# color5  #cb1ed1
+# color13 #fd28ff
 
 #: magenta
-
-color6  #0dcdcd
-color14 #14ffff
+# color6  #0dcdcd
+# color14 #14ffff
 
 #: cyan
-
-color7  #dddddd
-color15 #ffffff
+# color7  #dddddd
+# color15 #ffffff
 
 #: white
-
-mark1_foreground black
+# mark1_foreground black
 
 #: Color for marks of type 1
-
-mark1_background #98d3cb
+# mark1_background #98d3cb
 
 #: Color for marks of type 1 (light steel blue)
-
-mark2_foreground black
+# mark2_foreground black
 
 #: Color for marks of type 2
-
-mark2_background #f2dcd3
+# mark2_background #f2dcd3
 
 #: Color for marks of type 1 (beige)
-
-mark3_foreground black
+# mark3_foreground black
 
 #: Color for marks of type 3
-
-mark3_background #f274bc
+# mark3_background #f274bc
 
 #: Color for marks of type 3 (violet)
 
@@ -1111,7 +1091,7 @@ mark3_background #f274bc
 
 #: Advanced {{{
 
-shell .
+shell zsh 
 
 #: The shell program to execute. The default value of . means to use
 #: whatever shell is set as the default shell for the current user.
@@ -1331,16 +1311,14 @@ term xterm-kitty
 #: }}}
 
 #: OS specific tweaks {{{
-
-wayland_titlebar_color system
+# wayland_titlebar_color system
 
 #: The color of the kitty window's titlebar on Wayland systems with
 #: client side window decorations such as GNOME. A value of system
 #: means to use the default system color, a value of background means
 #: to use the background color of the currently active window and
 #: finally you can use an arbitrary color, such as #12af59 or red.
-
-macos_titlebar_color system
+# macos_titlebar_color system
 
 #: The color of the kitty window's titlebar on macOS. A value of
 #: system means to use the default system color, light or dark can
@@ -1841,8 +1819,8 @@ map ctrl+shift+tab previous_tab
 
 #: New tab
 
-map kitty_mod+t new_tab
-map cmd+t       new_tab
+map kitty_mod+x new_tab_with_cwd
+map cmd+x       new_tab_with_cwd
 
 #: Close tab
 
@@ -2164,3 +2142,17 @@ map shift+cmd+/ open_url https://sw.kovidgoyal.net/kitty/
 
 #: }}}
 
+
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Mocha
+include current-theme.conf
+# END_KITTY_THEME
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="Roboto Mono"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
