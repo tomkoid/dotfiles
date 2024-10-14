@@ -19,7 +19,7 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu wofi --show drun 
-set $browser brave
+set $browser librewolf 
 set $windowopacity 0.9
 
 ### Output configuration
