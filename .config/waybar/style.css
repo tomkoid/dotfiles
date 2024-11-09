@@ -3,7 +3,7 @@
 * {
   border: none;
   font-family: "JetBrains Mono Nerd Font";
-  font-size: 11pt;
+  font-size: 10pt;
   /* min-height: 0; */
   /* padding: 2px; */
   /* padding-left: 10px; */
@@ -12,14 +12,13 @@
   margin: 0;
   padding: 0;
   padding-top: 1px;
+    /* margin-top: 20px; */
   padding-bottom: 1px;
   /* opacity: 0.8; */
   color: @text;
 }
 
 window#waybar {
-  padding-bottom: 100px;
-  padding-top: 100px;
   background: rgba(30, 30, 46, 0.75);
 }
 
@@ -37,7 +36,7 @@ window#waybar {
 /*workspaces*/
 #workspaces button label {
   color: 	@surface2;
-  font-weight: bolder;
+  /* font-weight: bolder; */
 }
 
 #workspaces button.active label {
@@ -50,24 +49,30 @@ window#waybar {
   /* margin-top: 2px; */
   margin-right: 6px;
   margin-left: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 10px;
 }
 
 #workspaces button {
+  margin-right: 5px;
+  margin-left: 5px;
+
   background-color: @crust;
-  margin-right: 10px;
-  font-weight: bolder;
-  padding-left: 3px;
-  padding-right: 3px;
+  border-radius: 10px;
+  /* font-weight: bolder; */
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #workspaces button.active {
-  background: @text;
+  background: @overlay2;
   /* background-size: 400% 400%; */
   color: @crust;
 }
 
 #workspaces button.active label {
-  background-color: @text;
+  /* background-color: @text; */
 }
 
 #mpd {

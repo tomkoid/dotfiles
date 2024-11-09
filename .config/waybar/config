@@ -80,7 +80,6 @@
     "format": "󰌌 {}",
     "format-en": "en",
     "format-cs": "cz",
-    "keyboard-name": "at-translated-set-2-keyboard"
   },
   "cpu": {
     "interval": 2,
