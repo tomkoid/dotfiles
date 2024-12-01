@@ -16,7 +16,7 @@
     /* margin-top: 20px; */
   padding-bottom: 1px;
   /* opacity: 0.8; */
-  color: #fff;
+  color: @text;
 }
 
 window#waybar {
@@ -120,7 +120,6 @@ window#waybar {
 
 #clock label {
   /* color: @lavender; */
-  font-weight: bolder;
 }
 
 #clock {
@@ -129,6 +128,7 @@ window#waybar {
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   /* margin-top: 2px; */
   margin-right: 15px;
+  font-weight: bold;
 }
 
 #network {
