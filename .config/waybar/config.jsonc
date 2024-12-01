@@ -10,6 +10,7 @@
     "mpd"
   ],
   "modules-center": [
+    "clock"
   ],
   "modules-right": [
     "disk",
@@ -19,7 +20,7 @@
     "memory",
     "pulseaudio",
     "battery",
-    "clock"
+    "idle_inhibitor",
   ],
   "tray": {
     "padding": 10,
@@ -109,9 +110,9 @@
   },
 
   "clock": {
-    "format": "  {:%d <small>%a</small> %H:%M}",
-    "format": "  {:%a %d/%m/%y | %H:%M}",
-    "format-alt": " {:%A %B %d %Y (%V) | %r}",
+    "format": "{:%d <small>%a</small> %H:%M}",
+    "format": "{:%a %d/%m/%y | %H:%M}",
+    "format-alt": "{:%A %B %d %Y (%V) | %r}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "calendar-weeks-pos": "right",
     "today-format": "<span color='#f38ba8'><b><u>{}</u></b></span>",
@@ -119,6 +120,16 @@
     "format-calendar-weeks": "<span color='#94e2d5'><b>W{:%U}</b></span>",
     "format-calendar-weekdays": "<span color='#f9e2af'><b>{}</b></span>",
     "interval": 1
+  },
+
+  "idle_inhibitor": {
+      "format": "{icon}",
+      "tooltip-format-activated": "Idle Inhibitor: Activated",
+      "tooltip-format-deactivated": "Idle Inhibitor: Dectivated",
+      "format-icons": {
+          "activated": "  ",
+          "deactivated": "  "
+      }
   },
 
   "mpd": {

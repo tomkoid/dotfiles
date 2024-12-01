@@ -1,4 +1,5 @@
-@import "./mocha.css";
+/* @import "./mocha.css"; */
+@import "./colors.css";
 
 * {
   border: none;
@@ -15,11 +16,12 @@
     /* margin-top: 20px; */
   padding-bottom: 1px;
   /* opacity: 0.8; */
-  color: @text;
+  color: #fff;
 }
 
 window#waybar {
-  background: rgba(30, 30, 46, 0.75);
+  /* background: rgba(30, 30, 46, 0.75); */
+  background: @base;
 }
 
 /*Entire Bar*/
@@ -66,7 +68,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background: @overlay2;
+  background: @text;
   /* background-size: 400% 400%; */
   color: @crust;
 }
@@ -80,31 +82,31 @@ window#waybar {
 }
 
 #mpd.playing {
-  color: @green;
+  /* color: @green; */
 }
 
 #disk {
-  color: @maroon;
+  /* color: @maroon; */
   margin-right: 15px;
 }
 
 #language {
-  color: @mauve;
+  /* color: @mauve; */
   margin-right: 15px;
 }
 
 #cpu {
-  color: @green;
+  /* color: @green; */
   margin-right: 15px;
 }
 
 #memory {
-  color: @blue;
+  /* color: @blue; */
   margin-right: 15px;
 }
 
 #pulseaudio {
-  color: @red;
+  /* color: @red; */
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   /* margin-top: 2px; */
@@ -117,12 +119,12 @@ window#waybar {
 }
 
 #clock label {
-  color: @lavender;
+  /* color: @lavender; */
   font-weight: bolder;
 }
 
 #clock {
-  color: @lavender;
+  /* color: @lavender; */
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   /* margin-top: 2px; */
@@ -134,7 +136,7 @@ window#waybar {
 }
 
 #network {
-  color: @sapphire;
+  /* color: @sapphire; */
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   border-top-left-radius: 0;
@@ -143,7 +145,7 @@ window#waybar {
 }
 
 #battery {
-  color: @yellow;
+  /* color: @yellow; */
   /* font-size: 15px; */
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
