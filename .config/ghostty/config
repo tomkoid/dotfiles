@@ -1,0 +1,7 @@
+theme = catppuccin-mocha
+font-family = "JetBrains Mono Nerd Font"
+font-size = 13
+background-opacity = 0.92
+command = zsh
+
+window-decoration = false
