@@ -155,3 +155,6 @@ function command_not_found_handler {
         return 127
     fi
 }
+
+# bun completions
+[ -s "/home/tom/.bun/_bun" ] && source "/home/tom/.bun/_bun"
