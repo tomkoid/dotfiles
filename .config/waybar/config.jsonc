@@ -89,6 +89,7 @@
   },
   "memory": {
     "format": " {}%",
+    "interval": 2,
     "tooltip": true
   },
   "pulseaudio": {
