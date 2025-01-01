@@ -1,5 +1,5 @@
 set EDITOR "nvim"
-NIX_SHELL="zsh"
+set NIX_SHELL "zsh"
 
 # reload .bash_aliases
 alias rl="source ~/.bash_aliases"
