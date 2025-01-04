@@ -3,7 +3,7 @@
   "layer": "top",
   "position": "top",
   "height": 0, // Waybar height (to be removed for auto height)
-  "output": ["DP-4", "DP-3"],
+  "output": ["DP-1", "DP-2"],
   "modules-left": [
     "tray",
     "hyprland/workspaces",
@@ -165,7 +165,8 @@
 
   "disk": {
     "interval": 15,
-    "format": "󰋊 {free} free",
+    "format": "󰋊 {free} free / {percentage_used}% used",
+    "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)\nRemaining space: {free}",
     "path": "/"
   },
   "network": {
