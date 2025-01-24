@@ -1,7 +1,7 @@
-theme = catppuccin-mocha
+theme = tokyonight_night 
 font-family = "JetBrains Mono Nerd Font"
 font-size = 13
-mouse-scroll-multiplier = 2
+mouse-scroll-multiplier = 1
 confirm-close-surface = false
 background-opacity = 0.92
 command = zsh

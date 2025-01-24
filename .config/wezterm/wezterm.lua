@@ -41,7 +41,7 @@ config.default_prog = { "zsh" }
 
 config.font = wezterm.font_with_fallback({
 	{ family = "JetBrains Mono Nerd Font", weight = "Regular" },
-	{ family = "Font Awesome 6 Free", weight = "Black", stretch = "Normal", style = "Normal" },
+	{ family = "Font Awesome 6 Free",      weight = "Black",  stretch = "Normal", style = "Normal" },
 	"Noto Serif",
 })
 
