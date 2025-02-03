@@ -3,7 +3,7 @@ font-family = "JetBrains Mono Nerd Font"
 font-size = 13
 mouse-scroll-multiplier = 1
 confirm-close-surface = false
-background-opacity = 0.92
+background-opacity = 0.9
 command = zsh
 
 gtk-single-instance = true
