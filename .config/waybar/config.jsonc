@@ -171,11 +171,11 @@
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format": "{icon} {essid} ({signalStrength}%)",
+    "format": "{icon} ({signalStrength}%)",
     "format-ethernet": "{icon} ",
     "format-disconnected": "󰤮 No Internet",
     "format-linked": "󱚵 {ifname} (No IP)",
-    "format-alt": "↕ {bandwidthUpBytes} | ↕ {bandwidthDownBytes}",
+    "format-alt": "↕ {bandwidthUpBytes} | ↕ {bandwidthDownBytes} ({essid})",
     "tooltip-format": "{ifname}: {ipaddr}/{cidr} 󰩟 {gwaddr}",
     "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "{icon} {ipaddr}/{cidr}",
