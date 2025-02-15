@@ -137,7 +137,7 @@
     "format": "{stateIcon} {consumeIcon} {randomIcon} {repeatIcon}{singleIcon} <span style='italic'>{artist}</span> - {title:.45} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
     "format-disconnected": "Disconnected ",
     "format-stopped": "",
-    "interval": 1,
+    "interval": 5, // retry interval
     "consume-icons": {
       "on": " " // Icon shows only when "consume" is on
     },
@@ -157,7 +157,7 @@
     },
     "tooltip-format": "MPD (connected)",
     "tooltip-format-disconnected": "MPD (disconnected)",
-    "max-length": 100,
+    "max-length": 65,
     "on-click": "mpc toggle",
     "on-scroll-up": "mpc next",
     "on-scroll-down": "mpc prev"
