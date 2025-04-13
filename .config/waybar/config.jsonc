@@ -14,11 +14,11 @@
   ],
   "modules-right": [
     "disk",
-    "network",
     "hyprland/language",
     "cpu",
     "memory",
     "pulseaudio",
+    "network",
     "battery",
     "idle_inhibitor",
   ],
@@ -171,10 +171,10 @@
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format": "{icon} ({signalStrength}%)",
-    "format-ethernet": "{icon} ",
-    "format-disconnected": "󰤮 No Internet",
-    "format-linked": "󱚵 {ifname} (No IP)",
+    "format": "{icon}",
+    "format-ethernet": "{icon}",
+    "format-disconnected": "󰤮  No Internet",
+    "format-linked": "󱚵  {ifname} (No IP)",
     "format-alt": "↕ {bandwidthUpBytes} | ↕ {bandwidthDownBytes} ({essid})",
     "tooltip-format": "{ifname}: {ipaddr}/{cidr} 󰩟 {gwaddr}",
     "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%)",
@@ -182,13 +182,13 @@
     "tooltip-format-disconnected": "{icon} Disconnected",
     "on-click-right": "nm-connection-editor",
     "format-icons": {
-        "ethernet": "󰈀",
-        "disconnected": "⚠",
+        "ethernet": "󰈀 ",
+        "disconnected": " ",
         "wifi": [
-            "󰤨 ",
-            "󰤥 ",
-            "󰤢 ",
             "󰤟 ",
+            "󰤢 ",
+            "󰤥 ",
+            "󰤨 ",
         ]
     },
     "interval": 2,
@@ -202,8 +202,8 @@
         "warning": 30,
         "critical": 15
     },
-    "format": "{icon}  {capacity}%",
-    "format-icons": ["", "", "", "", ""],
+    "format": "{icon} {capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
     "max-length": 25
  }
 
