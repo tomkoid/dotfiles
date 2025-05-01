@@ -5,12 +5,11 @@
   "height": 0, // Waybar height (to be removed for auto height)
   "output": ["DP-1", "DP-2", "eDP-1"],
   "modules-left": [
-    "tray",
-    "hyprland/workspaces",
-    "mpd"
+    "hyprland/window",
   ],
   "modules-center": [
-    "clock"
+    "clock",
+    "hyprland/workspaces",
   ],
   "modules-right": [
     "disk",
@@ -21,6 +20,7 @@
     "network",
     "battery",
     "idle_inhibitor",
+    "tray"
   ],
   "tray": {
     "padding": 10,
@@ -65,6 +65,17 @@
       "foot": "",
       "code": "󰨞",
     },
+  },
+
+
+  "hyprland/window": {
+      "format": "  {title}",
+      "rewrite": {
+          "(.*) — Mozilla Firefox": "🌎 $1",
+          "(.*) — Zen Browser": "$1",
+          "(.*) - fish": "> [$1]"
+      },
+      "separate-outputs": true
   },
 
   "custom/clipboard": {
@@ -134,7 +145,7 @@
   },
 
   "mpd": {
-    "format": "{stateIcon} {consumeIcon} {randomIcon} {repeatIcon}{singleIcon} <span style='italic'>{artist}</span> - {title:.45} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "format": "{stateIcon} {consumeIcon} {randomIcon} {repeatIcon}{singleIcon} <span style='italic'>{artist}</span> - {title:.45}",
     "format-disconnected": "Disconnected ",
     "format-stopped": "",
     "interval": 5, // retry interval
@@ -165,7 +176,8 @@
 
   "disk": {
     "interval": 15,
-    "format": "󰋊 {free} free / {percentage_used}% used",
+    "format": "󰋊 {percentage_used}%",
+    "format-alt": "󰋊 {free} free / {percentage_used}% used",
     "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)\nRemaining space: {free}",
     "path": "/"
   },

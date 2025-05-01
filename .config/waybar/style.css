@@ -22,12 +22,23 @@
 window#waybar {
   /* background: rgba(30, 30, 46, 0.75); */
   background: @base;
+
+  transition-property: background-color;
+  transition-duration: .5s;
 }
 
 /*Entire Bar*/
 #waybar {
   /* background: @crust; */
   color: @text;
+}
+
+#window {
+	margin-left: 10px;
+}
+
+#window label {
+  color: @overlay2;
 }
 
 #tray {
@@ -37,8 +48,8 @@ window#waybar {
 
 /*workspaces*/
 #workspaces button label {
-  color: 	@surface2;
-  /* font-weight: bolder; */
+  color: 	@overlay1;
+  font-weight: normal;
 }
 
 #workspaces button.active label {
@@ -47,30 +58,27 @@ window#waybar {
 }
 
 #workspaces {
-  /* background-color: @surface0; */
-  /* margin-top: 2px; */
-  margin-right: 6px;
-  margin-left: 6px;
-  padding-left: 6px;
-  padding-right: 6px;
+  background-color: @surface0;
+  padding-left: 2px;
+  padding-right: 2px;
   border-radius: 10px;
 }
 
 #workspaces button {
-  margin-right: 5px;
-  margin-left: 5px;
+  margin-right: 3px;
+  margin-left: 3px;
 
-  background-color: @crust;
-  border-radius: 10px;
+  background-color: @surface1;
+  border-radius: 100%;
   /* font-weight: bolder; */
   padding-left: 5px;
   padding-right: 5px;
 }
 
 #workspaces button.active {
-  background: @text;
+  background: @overlay0;
   /* background-size: 400% 400%; */
-  color: @crust;
+  color: @surface0;
 }
 
 #workspaces button.active label {
@@ -128,7 +136,7 @@ window#waybar {
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   /* margin-top: 2px; */
   border-radius: 10px;
-  background-color: #35353e;
+  background-color: @surface2;
   color: @text;
   padding-left: 10px;
   padding-right: 10px;
