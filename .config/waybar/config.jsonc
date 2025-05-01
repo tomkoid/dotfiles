@@ -75,7 +75,8 @@
           "(.*) — Zen Browser": "$1",
           "(.*) - fish": "> [$1]"
       },
-      "separate-outputs": true
+      "separate-outputs": true,
+      "max-length": 80,
   },
 
   "custom/clipboard": {
