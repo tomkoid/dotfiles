@@ -118,10 +118,10 @@ alias wl="~/Scripts/wallpaper.sh"
 #   rm "${1}.png"
 # }
 
-nix_try_pkg() {
-	nix shell nixpkgs#$1 --command $NIX_SHELL 
-}
-
-nix_run_pkg() {
-	nix run nixpkgs#$1
-}
+# nix_try_pkg() {
+# 	nix shell nixpkgs#$1 --command $NIX_SHELL 
+# }
+#
+# nix_run_pkg() {
+# 	nix run nixpkgs#$1
+# }
