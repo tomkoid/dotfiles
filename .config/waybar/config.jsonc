@@ -9,11 +9,11 @@
   ],
   "modules-center": [
     "clock",
-    "hyprland/workspaces",
+    "niri/workspaces",
   ],
   "modules-right": [
     "disk",
-    "hyprland/language",
+    "niri/language",
     "cpu",
     "memory",
     "pulseaudio",
