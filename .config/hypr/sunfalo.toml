@@ -1,6 +1,6 @@
 ### Format for time is HH:MM:SS
 sunrise_time = "07:00"
-sunset_time = "12:00"
+sunset_time = "22:00"
 
 # Night time screen temperature
 sunset_temperature = 2500

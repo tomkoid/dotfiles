@@ -21,7 +21,7 @@
 
 window#waybar {
   /* background: rgba(30, 30, 46, 0.75); */
-  background: @base;
+  background: rgba(9, 21, 24, 0.8); /* Semi-transparent */
 
   transition-property: background-color;
   transition-duration: .5s;
