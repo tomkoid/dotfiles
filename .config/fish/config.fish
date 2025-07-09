@@ -26,6 +26,30 @@ function , --description 'add software to shell session'
   nix shell nixpkgs#$argv[1..-1]
 end
 
+function fish_command_not_found \
+    --description 'Called by Fish when a command is not found'
+
+    set purple \e\[1\;35m
+    set bright \e\[0\;1m
+    set green \e\[1\;32m
+    set reset \e\[0m
+    echo "fish: command not found: $argv[1]"
+    if test -f /usr/bin/pacman
+        set entries ( /usr/bin/pkgfile -- "/usr/bin/$argv[1]" | string split '\n' )
+
+        if test (count $entries) -gt 0
+            printf "$bright$argv[1]$reset may be found in the following packages:\n"
+            for entry in $entries
+                set parts (string split / $entry)
+                printf "$green%s$reset$purple/%s$reset\n" $parts[1] $parts[2]
+            end
+        end
+
+        return 127
+    end
+    # exit 97
+end
+
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
