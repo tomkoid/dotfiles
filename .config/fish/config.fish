@@ -15,9 +15,12 @@ export EDITOR=nvim # change default editor
 starship init fish | source
 enable_transience
 zoxide init --cmd cd fish | source
-fzf --fish | source
+# fzf --fish | source
 # [ -f /usr/share/autojump/autojump.fish ]; and source /usr/share/autojump/autojump.fish
 # source /usr/share/doc/find-the-command/ftc.fish
+
+fzf_configure_bindings --directory=\cf
+fish_config theme choose "Rosé Pine"
 
 function , --description 'add software to shell session'
   nix shell nixpkgs#$argv[1..-1]
