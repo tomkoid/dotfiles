@@ -1,5 +1,5 @@
 theme = tokyonight_night 
-font-family = "JetBrains Mono Nerd Font"
+font-family = "Iosevka NF"
 font-size = 13
 mouse-scroll-multiplier = 1
 confirm-close-surface = false
