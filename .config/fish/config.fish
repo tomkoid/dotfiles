@@ -25,6 +25,17 @@ zoxide init --cmd cd fish | source
 fzf_configure_bindings --directory=\cf
 fish_config theme choose "Rosé Pine"
 
+
+# If on NixOS
+if test (grep '^ID=' /etc/os-release | cut -d'=' -f2) = "nixos"
+    direnv hook fish | source
+end
+
+# Use kitten ssh if on kitty
+if test "$TERM" = "xterm-kitty"
+    alias ssh="kitten ssh"
+end
+
 function , --description 'add software to shell session'
   nix shell nixpkgs#$argv[1..-1]
 end
