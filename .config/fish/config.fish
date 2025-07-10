@@ -5,6 +5,9 @@
 # PATH
 export PATH="/usr/bin:/usr/sbin:/usr/local/bin:$HOME/.local/bin:$HOME/.cargo/bin:/opt/xtensa-lx106-elf-gcc/bin:$HOME/go/bin:$HOME/.surrealdb:$HOME/.fly/bin:$PATH"
 
+# use other newt colors
+export NEWT_COLORS='root=black,black;window=black,black;border=white,black;listbox=white,black;label=blue,black;checkbox=red,black;title=green,black;button=white,red;actsellistbox=white,red;actlistbox=white,gray;compactbutton=white,gray;actcheckbox=white,blue;entry=lightgray,black;textbox=blue,black'
+
 source ~/.bash_aliases
 # fish_add_path /home/tom/.spicetify
 
