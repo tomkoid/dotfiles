@@ -23,7 +23,7 @@ zoxide init --cmd cd fish | source
 # source /usr/share/doc/find-the-command/ftc.fish
 
 fzf_configure_bindings --directory=\cf
-fish_config theme choose "Rosé Pine"
+fish_config theme choose "Catppuccin Mocha"
 
 
 # If on NixOS
