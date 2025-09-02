@@ -1,3 +1,9 @@
+[general]
+sensitivity = 90
+framerate = 144
+mode = normal 
+
+
 [color]
 
 gradient = 1
