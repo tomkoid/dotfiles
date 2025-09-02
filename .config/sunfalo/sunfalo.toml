@@ -2,15 +2,15 @@
 sunrise_time = "07:00"
 sunset_time = "21:00"
 
-# Night time screen temperature (1000 - 20000)
-sunset_temperature = 2800
+# Night time screen temperature (1000-20000)
+sunset_temperature = 2500 
 
 # Interval at which to update the screen temperature and respond to events (in milliseconds)
 tick_interval = 250
 
 # Restart on wake-up from suspend (can sometimes fix some issues after waking up from suspend, useful on NVIDIA GPUs)
 [restart_on_wakeup]
-enable = true
+enable = true 
 
 # Delay between wake-up from suspend and restart of hyprsunset (in milliseconds)
 delay = 1000
