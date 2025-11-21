@@ -24,7 +24,7 @@ get_wallpapers () {
   echo -e $fmt_wallpapers
 }
 
-wallpaper_command="swww img --resize fit"
+wallpaper_command="swww img"
 
 # recover wallpaper
 if [ "$1" == "r" ]
