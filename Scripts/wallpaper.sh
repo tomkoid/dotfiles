@@ -5,7 +5,7 @@ wallpapers="$HOME/Wallpapers"
 mode="fill"
 
 get_wallpapers () {
-  listed_wallpapers=$(fd -L --full-path $wallpapers -e png -e jpg -e webp -e jpeg --color never -d 5)
+  listed_wallpapers=$(fd . -L --full-path $wallpapers -e png -e jpg -e webp -e jpeg --color never -d 5)
 
   fmt_wallpapers=""
 
@@ -31,7 +31,7 @@ if [ "$1" == "r" ]
 then
   recover_wallpaper=$(cat ~/.cache/wallpaper)
   recover_mode=$(cat ~/.cache/wallpaper_mode)
-  swww img "$wallpapers/$recover_wallpaper" --resize $recover_mode>/dev/null
+  swww img "$recover_wallpaper" --resize $recover_mode>/dev/null
   exit 0
 fi
 
@@ -39,18 +39,20 @@ set_background() {
   echo $1 > ~/.cache/wallpaper
   echo $2 > ~/.cache/wallpaper_mode
   # setsid -f swaybg --mode $mode -i $wallpapers/$1>/dev/null
-  $wallpaper_command "$wallpapers/$1">/dev/null
+  $wallpaper_command "$1">/dev/null
 }
 
+# echo $(get_wallpapers)
+
 # background=$(ls $wallpapers | fzf --preview="swaybg --mode $mode -i $wallpapers/{}&>/dev/null" --preview-window=right:0% | xargs -I {} echo {})
-background=$(get_wallpapers | fzf --preview="$wallpaper_command $wallpapers/{}&>/dev/null" --preview-window=right:0% | xargs -I {} echo {})
+background=$(get_wallpapers | fzf --preview="$wallpaper_command {}&>/dev/null" --preview-window=right:0% | xargs -I {} echo {})
 # mode=$(printf "fit\nfill\nstretch\ncenter\ntile\nmax\n" | fzf --preview="swaybg --mode {} -i $wallpapers/$background&>/dev/null" --preview-window=right:0% | xargs -I {} echo {})
 
 # echo $background
 
 if [ background != "" ]
 then
-  if [ ! -f "${wallpapers}/${background}" ]
+  if [ ! -f "${background}" ]
   then
     echo "ERROR: selected background doesn't exist"
     exit 1
