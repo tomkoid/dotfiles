@@ -32,6 +32,10 @@
     "scroll-step": 4,
     "sort": false,
   },
+  
+  "niri/workspaces": {
+    "current-only": true,
+  },
 
   "sway/workspaces": {
     "format": "{name}",
