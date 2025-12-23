@@ -1,3 +1,4 @@
+-- Neovim settings and configuration file
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
