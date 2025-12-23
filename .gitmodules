@@ -2,10 +2,10 @@
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
 	branch = master
-[submodule ".config/nvim"]
-	path = .config/nvim
-	url = https://codeberg.org/tomkoid/neovim-dotfiles
-	branch = main
+; [submodule ".config/nvim"]
+; 	path = .config/nvim
+; 	url = https://codeberg.org/tomkoid/neovim-dotfiles
+; 	branch = main
 [submodule "Wallpapers"]
 	path = Wallpapers
 	url = https://codeberg.org/tomkoid/wallpapers
