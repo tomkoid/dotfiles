@@ -11,4 +11,4 @@ set -euo pipefail
 # grim -g $(slurp) - | wl-copy
 # grim -g "$(slurp)" - | swappy -f -
 # hyprshot -m ${screenshot_type} --freeze --raw - | wl-copy
-grimblast --cursor --wait 1 --freeze save area - | swappy -f -
+grimblast --freeze save area - | swappy -f -
