@@ -27,7 +27,7 @@ return {
 				--  the list of additional_vim_regex_highlighting and disabled languages for indent.
 				additional_vim_regex_highlighting = { "ruby", "markdown", "rust" },
 			},
-			indent = { enable = true, disable = { "ruby", "cpp", "c", "rust" } },
+			indent = { enable = false, disable = { "ruby", "cpp", "c", "rust" } },
 			autotag = {
 				enable = true,
 				enable_rename = true,
