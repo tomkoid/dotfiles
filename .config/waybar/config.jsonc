@@ -3,13 +3,17 @@
   "layer": "bottom",
   "position": "top",
   "height": 0, // Waybar height (to be removed for auto height)
-  "output": ["DP-1", "DP-2", "eDP-1"],
+  "output": [
+    "DP-1",
+    "DP-2",
+    "eDP-1"
+  ],
   "modules-left": [
-    "hyprland/window",
+    "hyprland/window"
   ],
   "modules-center": [
     "clock",
-    "hyprland/workspaces",
+    "hyprland/workspaces"
   ],
   "modules-right": [
     "disk",
@@ -30,36 +34,33 @@
     "max-icon-size": 20,
     "scroll": false,
     "scroll-step": 4,
-    "sort": false,
+    "sort": false
   },
-  
   "niri/workspaces": {
-    "current-only": true,
+    "current-only": true
   },
-
   "sway/workspaces": {
     "format": "{name}",
     "disable-scroll": true,
     "sort-by-number": true,
     "all-outputs": true,
     "format-icons": {
-                    "1":"A",
-                    "2":"B",
-                    "3":"C",
-                    "4":"D",
-                    "5":"E",
-                    "6":"F",
-                    "7":"G",
-                    "8":"H",
-                    "9":"I",
-                    "10":"J",
-                    "default": "󰕾",
-        },
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E",
+      "6": "F",
+      "7": "G",
+      "8": "H",
+      "9": "I",
+      "10": "J",
+      "default": "󰕾"
+    },
     "on-scroll-up": "hyprctl dispatch workspace e-1",
     "on-scroll-down": "hyprctl dispatch workspace e+1",
     "on-click": "activate"
   },
-
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-window-separator": "\n",
@@ -67,22 +68,19 @@
     "window-rewrite": {
       "firefox": "",
       "foot": "",
-      "code": "󰨞",
-    },
+      "code": "󰨞"
+    }
   },
-
-
   "hyprland/window": {
-      "format": "  {title}",
-      "rewrite": {
-          "(.*) — Mozilla Firefox": "🌎 $1",
-          "(.*) — Zen Browser": "$1",
-          "(.*) - fish": "> [$1]"
-      },
-      "separate-outputs": true,
-      "max-length": 80,
+    "format": "  {title}",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "🌎 $1",
+      "(.*) — Zen Browser": "$1",
+      "(.*) - fish": "> [$1]"
+    },
+    "separate-outputs": true,
+    "max-length": 80
   },
-
   "custom/clipboard": {
     "format": "󰐃",
     "return-type": "json",
@@ -96,12 +94,12 @@
   "hyprland/language": {
     "format": "󰌌 {}",
     "format-en": "en",
-    "format-cs": "cz",
+    "format-cs": "cz"
   },
   "cpu": {
     "interval": 2,
     "format": " {usage}%",
-    "tooltip": true 
+    "tooltip": true
   },
   "memory": {
     "format": " {}%",
@@ -117,15 +115,14 @@
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
-        "default": [
-            "",
-            "",
-            ""
-        ]
+      "default": [
+        "",
+        "",
+        ""
+      ]
     },
     "on-click": "pamixer -t"
   },
-
   "clock": {
     // "format": "{:%d <small>%a</small> %H:%M}",
     "format": "{:%a %d/%m/%y | %H:%M:%S}",
@@ -138,17 +135,15 @@
     "format-calendar-weekdays": "<span color='#f9e2af'><b>{}</b></span>",
     "interval": 1
   },
-
   "idle_inhibitor": {
-      "format": "{icon}",
-      "tooltip-format-activated": "Idle Inhibitor: Activated",
-      "tooltip-format-deactivated": "Idle Inhibitor: Dectivated",
-      "format-icons": {
-          "activated": "  ",
-          "deactivated": "  "
-      }
+    "format": "{icon}",
+    "tooltip-format-activated": "Idle Inhibitor: Activated",
+    "tooltip-format-deactivated": "Idle Inhibitor: Dectivated",
+    "format-icons": {
+      "activated": "  ",
+      "deactivated": "  "
+    }
   },
-
   "mpd": {
     "format": "{stateIcon} {consumeIcon} {randomIcon} {repeatIcon}{singleIcon} <span style='italic'>{artist}</span> - {title:.45}",
     "format-disconnected": "Disconnected ",
@@ -178,7 +173,6 @@
     "on-scroll-up": "mpc next",
     "on-scroll-down": "mpc prev"
   },
-
   "disk": {
     "interval": 15,
     "format": "󰋊 {percentage_used}%",
@@ -199,29 +193,33 @@
     "tooltip-format-disconnected": "{icon} Disconnected",
     "on-click-right": "nm-connection-editor",
     "format-icons": {
-        "ethernet": "󰈀 ",
-        "disconnected": " ",
-        "wifi": [
-            "󰤟 ",
-            "󰤢 ",
-            "󰤥 ",
-            "󰤨 ",
-        ]
+      "ethernet": "󰈀 ",
+      "disconnected": " ",
+      "wifi": [
+        "󰤟 ",
+        "󰤢 ",
+        "󰤥 ",
+        "󰤨 "
+      ]
     },
     "interval": 2,
     "max-length": 50
- },
-
- "battery": {
+  },
+  "battery": {
     "bat": "BAT0",
     "interval": 30,
     "states": {
-        "warning": 30,
-        "critical": 15
+      "warning": 30,
+      "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-icons": [" ", " ", " ", " ", " "],
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
     "max-length": 25
- }
-
+  }
 }
