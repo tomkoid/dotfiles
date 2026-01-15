@@ -1,0 +1,2 @@
+
+set -gx GEODE_SDK /home/tom/Documents/Geode/
