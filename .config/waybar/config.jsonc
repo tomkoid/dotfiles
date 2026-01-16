@@ -9,15 +9,18 @@
     "eDP-1"
   ],
   "modules-left": [
-    "hyprland/window"
+    "hyprland/window",
+    "niri/window",
   ],
   "modules-center": [
     "clock",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "niri/workspaces",
   ],
   "modules-right": [
     "disk",
     "hyprland/language",
+    "niri/language",
     "cpu",
     "memory",
     "pulseaudio",
@@ -26,6 +29,7 @@
     "idle_inhibitor",
     "tray"
   ],
+
   "tray": {
     "padding": 10,
     "spacing": 10,
@@ -36,9 +40,11 @@
     "scroll-step": 4,
     "sort": false
   },
-  "niri/workspaces": {
-    "current-only": true
+
+  "niri/window": {
+    "format": "  {title}",
   },
+
   "sway/workspaces": {
     "format": "{name}",
     "disable-scroll": true,
