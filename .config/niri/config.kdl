@@ -149,7 +149,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
+    // default-column-width { proportion 0.5; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -226,7 +226,7 @@ layout {
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
-        // on
+        on
 
         // By default, the shadow draws only around its window, and not behind it.
         // Uncomment this setting to make the shadow draw behind its window.
@@ -655,5 +655,11 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 
+    Mod+Shift+B { spawn-sh "zen-browser"; }
+    Mod+E { spawn-sh "QT_QPA_PLATFORMTHEME=qt6ct dolphin"; }
     Mod+M { spawn-sh "~/Scripts/mute.sh"; }
+}
+
+environment {
+    QT_QPA_PLATFORM "qt5ct"
 }
