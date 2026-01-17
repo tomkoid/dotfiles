@@ -3,13 +3,14 @@ window_rule = []
 [niri]
 
 [kari]
-disable_notifications = false 
+disable_notifications = true
 
 [kari.scratchpad]
 default_size = "75% 60%"
 default_margin = 50
 
 [kari.plugins]
+autofill = true
 
 [kari.window_order]
 enable_event_listener = false
