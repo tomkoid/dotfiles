@@ -285,8 +285,8 @@ spawn-at-startup "swww-daemon"
 spawn-at-startup "mpd"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "swaync"
-spawn-at-startup "swaync"
 spawn-at-startup "flatpak" "run" "com.github.wwmm.easyeffects" "--gapplication-service"
+spawn-at-startup "wlsunset" "-s" "23:00" "-S" "06:00"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
