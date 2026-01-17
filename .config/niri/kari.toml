@@ -1,0 +1,25 @@
+window_rule = []
+
+[niri]
+
+[kari]
+disable_notifications = false 
+
+[kari.scratchpad]
+default_size = "75% 60%"
+default_margin = 50
+
+[kari.plugins]
+
+[kari.window_order]
+enable_event_listener = false
+default_weight = 0
+workspaces = []
+
+[scratchpads]
+
+[empty]
+
+[singleton]
+
+[window_order]

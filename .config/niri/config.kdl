@@ -72,7 +72,7 @@ input {
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    focus-follows-mouse max-scroll-amount="0%"
+    focus-follows-mouse max-scroll-amount="20%"
 }
 
 // You can configure outputs by their name, which you can find
@@ -114,7 +114,10 @@ input {
 
 cursor {
     xcursor-theme "breeze_cursors"
-    xcursor-size 24 
+    xcursor-size 24
+
+    hide-when-typing true
+    hide-after-inactive-ms 5000
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -216,7 +219,7 @@ layout {
         urgent-color "#9b0000"
 
         // Gradients can use a few different interpolation color spaces.
-        // For example, this is a pastel rainbow gradient via in="oklch longer hue".
+        // maximize-window-to-edges;For example, this is a pastel rainbow gradient via in="oklch longer hue".
         //
         // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
 
@@ -285,7 +288,7 @@ spawn-at-startup "swww-daemon"
 spawn-at-startup "mpd"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "swaync"
-spawn-at-startup "piri"
+spawn-at-startup "kari"
 spawn-at-startup "flatpak" "run" "com.github.wwmm.easyeffects" "--gapplication-service"
 spawn-at-startup "wlsunset" "-s" "23:00" "-S" "06:00"
 
@@ -294,7 +297,7 @@ spawn-at-startup "wlsunset" "-s" "23:00" "-S" "06:00"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-    // skip-at-startup
+    skip-at-startup
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -338,12 +341,13 @@ window-rule {
     default-column-width {}
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
+// Open the Firefox/Zen Browser picture-in-picture player as floating by default.
 window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"zen$"# title="^Picture-in-Picture$"
     open-floating true
 }
 
@@ -590,7 +594,7 @@ binds {
     // Mod+R { switch-preset-column-width-back; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+F { maximize-column; }
+    Mod+F { maximize-window-to-edges; }
     Mod+Shift+F { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
@@ -620,6 +624,8 @@ binds {
     // Move the focused window between the floating and the tiling layout.
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    // Mod+Shift+M { maximize-column; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
@@ -659,6 +665,7 @@ binds {
     Mod+Shift+B { spawn-sh "zen-browser"; }
     Mod+E { spawn-sh "dolphin"; }
     Mod+M { spawn-sh "~/Scripts/mute.sh"; }
+    Mod+Shift+M { spawn-sh "~/Scripts/mic-mute.sh"; }
 }
 
 environment {
