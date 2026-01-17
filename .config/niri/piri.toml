@@ -1,0 +1,23 @@
+window_rule = []
+
+[niri]
+
+[piri.scratchpad]
+default_size = "75% 60%"
+default_margin = 50
+
+[piri.plugins]
+autofill = true
+
+[piri.window_order]
+enable_event_listener = false
+default_weight = 0
+workspaces = []
+
+[scratchpads]
+
+[empty]
+
+[singleton]
+
+[window_order]
