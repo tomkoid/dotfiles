@@ -351,6 +351,14 @@ window-rule {
     open-floating true
 }
 
+// Spawn TIDAL-HiFi on DP-3
+window-rule {
+    match app-id="tidal-hifi"
+
+    open-on-output "DP-3"
+    open-fullscreen true
+}
+
 window-rule {
     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=10 y=10 relative-to="bottom-right"
