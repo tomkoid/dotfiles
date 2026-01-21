@@ -745,6 +745,8 @@ binds {
     Mod+E { spawn-sh "dolphin"; }
     Mod+M { spawn-sh "~/Scripts/mute.sh"; }
     Mod+Shift+M { spawn-sh "~/Scripts/mic-mute.sh"; }
+    Mod+Shift+D { spawn-sh "qs -c noctalia-shell ipc call notifications toggleDND"; }
+    Mod+Shift+S { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
 }
 
 environment {
