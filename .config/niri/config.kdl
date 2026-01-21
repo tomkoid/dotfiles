@@ -112,6 +112,45 @@ output "eDP-1" {
     position x=0 y=0
 }
 
+output "DP-1" {
+    mode "1920x1080@144"
+    scale 1.0
+    transform "normal"
+    position x=1025 y=0
+
+    focus-at-startup
+
+    hot-corners {
+        off
+    }
+}
+
+output "DP-2" {
+    mode "1920x1080@60"
+    scale 1.0 
+    transform "normal"
+    position x=2945 y=20
+    hot-corners {
+        top-right
+    }
+}
+
+output "DP-3" {
+    mode "1024x768@60"
+    scale 1.0 
+    transform "normal"
+    position x=0 y=40
+
+    hot-corners {
+        top-left
+    }
+}
+
+
+// monitor=DP-1,1920x1080@120,1024x0,1
+// monitor=DP-2,1920x1080@60,2944x0,1
+// monitor=DP-3,1024x768@60,0x70,1
+
 cursor {
     xcursor-theme "breeze_cursors"
     xcursor-size 24
@@ -282,7 +321,9 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
+// spawn-at-startup "waybar"
+
+spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "ghostty"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "mpd"
@@ -322,6 +363,13 @@ animations {
     // Uncomment to turn off all animations.
     // off
 
+    workspace-switch {
+        // spring damping-ratio=1.0 stiffness=500 epsilon=0.00001
+        duration-ms 250
+        // curve "cubic-bezier"
+        curve "cubic-bezier" 0.15 0.1 0.1 1.0
+    }
+
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 3.0
     slowdown 0.5
@@ -359,6 +407,25 @@ window-rule {
     open-maximized true
 }
 
+// DaVinci Resolve popups
+window-rule {
+    match app-id="resolve"
+    match is-floating=true
+
+    open-floating true
+    open-focused false
+
+    shadow {
+        off
+    }
+    border {
+        off
+    }
+    focus-ring {
+        off
+    }
+}
+
 window-rule {
     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=10 y=10 relative-to="bottom-right"
@@ -366,6 +433,12 @@ window-rule {
 
 window-rule {
     draw-border-with-background false
+
+    // Rounded corners for a modern look.
+    geometry-corner-radius 10
+
+    // Clips window contents to the rounded corner boundaries.
+    clip-to-geometry true
 }
 
 // Example: block out two password managers from screen capture.
@@ -679,4 +752,15 @@ binds {
 environment {
     QT_QPA_PLATFORM "wayland;xcb"
     QT_QPA_PLATFORMTHEME "qt5ct"
+    QT_AUTO_SCREEN_SCALE_FACTOR "1"
+
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    MOZ_ENABLE_WAYLAND "1"
+}
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+
+  disable-direct-scanout
 }
