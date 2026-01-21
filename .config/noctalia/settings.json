@@ -8,7 +8,8 @@
         "enableClipboardHistory": false,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
-        "pinnedApps": [],
+        "pinnedApps": [
+        ],
         "position": "center",
         "screenshotAnnotationTool": "",
         "showCategories": true,
@@ -119,12 +120,14 @@
                     "usePrimaryColor": false
                 },
                 {
-                    "blacklist": [],
+                    "blacklist": [
+                    ],
                     "colorizeIcons": false,
                     "drawerEnabled": true,
                     "hidePassive": false,
                     "id": "Tray",
-                    "pinned": []
+                    "pinned": [
+                    ]
                 },
                 {
                     "hideWhenZero": false,
@@ -251,7 +254,8 @@
         "monitorWidgets": [
             {
                 "name": "DP-1",
-                "widgets": []
+                "widgets": [
+                ]
             }
         ]
     },
@@ -264,9 +268,11 @@
         "enabled": false,
         "floatingRatio": 1,
         "inactiveIndicators": false,
-        "monitors": [],
+        "monitors": [
+        ],
         "onlySameOutput": true,
-        "pinnedApps": [],
+        "pinnedApps": [
+        ],
         "pinnedStatic": false,
         "position": "bottom",
         "size": 1
@@ -345,7 +351,8 @@
         "enabled": true,
         "location": "top_right",
         "lowUrgencyDuration": 2,
-        "monitors": [],
+        "monitors": [
+        ],
         "normalUrgencyDuration": 3,
         "overlayLayer": true,
         "respectExpireTimeout": false,
@@ -374,7 +381,8 @@
             2
         ],
         "location": "top_right",
-        "monitors": [],
+        "monitors": [
+        ],
         "overlayLayer": true
     },
     "sessionMenu": {
@@ -450,14 +458,15 @@
         "warningColor": ""
     },
     "templates": {
-        "activeTemplates": [],
+        "activeTemplates": [
+        ],
         "enableUserTemplates": false
     },
     "ui": {
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
         "boxBorderEnabled": false,
-        "fontDefault": "Google Sans Flex",
+        "fontDefault": "Adwaita Sans",
         "fontDefaultScale": 1.1,
         "fontFixed": "JetBrainsMono NFM",
         "fontFixedScale": 1,
@@ -473,9 +482,10 @@
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
-        "fillMode": "center",
+        "fillMode": "crop",
         "hideWallpaperFilenames": false,
-        "monitorDirectories": [],
+        "monitorDirectories": [
+        ],
         "overviewEnabled": false,
         "panelPosition": "follow_bar",
         "randomEnabled": false,
