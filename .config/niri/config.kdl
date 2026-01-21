@@ -73,6 +73,8 @@ input {
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     focus-follows-mouse max-scroll-amount="20%"
+
+    warp-mouse-to-focus
 }
 
 // You can configure outputs by their name, which you can find
@@ -439,9 +441,8 @@ window-rule {
     clip-to-geometry true
 }
 
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
+// Block out password managers from screen capture.
+window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
 
@@ -449,6 +450,13 @@ window-rule {
 
     // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
+}
+
+// Block out notifications from screencasts.
+layer-rule {
+    match namespace="^noctalia-notifications"
+
+    block-out-from "screencast"
 }
 
 // Example: enable rounded corners for all windows.
