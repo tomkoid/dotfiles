@@ -208,6 +208,8 @@ layout {
     // Alternatively, you can override it with a window rule called
     // `draw-border-with-background`.
 
+    background-color "transparent"
+
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
@@ -755,6 +757,19 @@ binds {
     Mod+Shift+M { spawn-sh "~/Scripts/mic-mute.sh"; }
     Mod+Shift+D { spawn-sh "qs -c noctalia-shell ipc call notifications toggleDND"; }
     Mod+Shift+S { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
+}
+
+// Put swaybg inside the overview backdrop.
+layer-rule {
+    match namespace="^noctalia-wallpaper"
+    place-within-backdrop true
+}
+
+// Optionally, disable the workspace shadows in the overview.
+overview {
+    workspace-shadow {
+        off
+    }
 }
 
 environment {
