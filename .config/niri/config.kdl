@@ -51,7 +51,7 @@ input {
         // natural-scroll
         // accel-speed 0.2
         accel-profile "flat"
-        // scroll-method "no-scroll"
+        // scroll-factor 1.5
     }
 
     trackpoint {
@@ -72,7 +72,7 @@ input {
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     focus-follows-mouse max-scroll-amount="20%"
 
-    warp-mouse-to-focus
+    // warp-mouse-to-focus
 }
 
 // You can configure outputs by their name, which you can find
@@ -113,10 +113,10 @@ output "eDP-1" {
 }
 
 output "DP-1" {
-    mode "1920x1080@144"
+    mode "1920x1080@120"
     scale 1.0
     transform "normal"
-    position x=1025 y=0
+    position x=1024 y=0
 
     focus-at-startup
 
@@ -129,7 +129,7 @@ output "DP-2" {
     mode "1920x1080@60"
     scale 1.0 
     transform "normal"
-    position x=2945 y=20
+    position x=2944 y=20
     hot-corners {
         top-right
     }
@@ -803,4 +803,6 @@ debug {
   honor-xdg-activation-with-invalid-serial
 
   disable-direct-scanout
+
+  wait-for-frame-completion-before-queueing
 }
