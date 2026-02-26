@@ -1,8 +1,8 @@
 [Unit]
 Description=Kitty terminal (single-instance, hidden)
 Documentation=man:kitty(1)
-Wants=graphical-session.target
-After=graphical-session.target
+Wants=graphical.target
+After=graphical.target
 
 [Service]
 Type=simple
@@ -13,4 +13,4 @@ KillMode=process
 Environment=XDG_RUNTIME_DIR=%t
 
 [Install]
-WantedBy=graphical-session.target
+WantedBy=graphical.target
