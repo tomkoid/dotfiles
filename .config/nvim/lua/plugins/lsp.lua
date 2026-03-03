@@ -218,6 +218,9 @@ return {
 			vim.lsp.enable("gdscript")
 			vim.lsp.config("gdscript", {
 				name = "godot",
+				flags = {
+					debounce_text_changes = 150,
+				},
 				cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
 			})
 
