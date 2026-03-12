@@ -1,0 +1,169 @@
+/* @import "./mocha.css"; */
+@import "./colors.css";
+
+* {
+  border: none;
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 10pt;
+  /* min-height: 0; */
+  /* padding: 2px; */
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+  /* border-radius: 15px; */
+  margin: 0;
+  padding: 0;
+  padding-top: 1px;
+    /* margin-top: 20px; */
+  padding-bottom: 1px;
+  /* opacity: 0.8; */
+  color: @text;
+}
+
+window#waybar {
+  /* background: rgba(30, 30, 46, 0.75); */
+  background: rgba(9, 21, 24, 0.8); /* Semi-transparent */
+
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+/*Entire Bar*/
+#waybar {
+  /* background: @crust; */
+  color: @text;
+}
+
+#window {
+	margin-left: 10px;
+}
+
+#window label {
+  color: @overlay2;
+}
+
+#tray {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*workspaces*/
+#workspaces button label {
+  color: 	@overlay1;
+  font-weight: normal;
+}
+
+#workspaces button.active label {
+  color: @base;
+  font-weight: bolder;
+}
+
+#workspaces {
+  background-color: @surface0;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 10px;
+}
+
+#workspaces button {
+  margin-right: 3px;
+  margin-left: 3px;
+
+  background-color: @surface1;
+  border-radius: 100%;
+  /* font-weight: bolder; */
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#workspaces button.active {
+  background: @overlay0;
+  /* background-size: 400% 400%; */
+  color: @surface0;
+}
+
+#workspaces button.active label {
+  /* background-color: @text; */
+}
+
+#mpd {
+  margin-left: 20px;
+}
+
+#mpd.playing {
+  /* color: @green; */
+}
+
+#disk {
+  /* color: @maroon; */
+  margin-right: 15px;
+}
+
+#language {
+  /* color: @mauve; */
+  margin-right: 15px;
+}
+
+#cpu {
+  /* color: @green; */
+  margin-right: 15px;
+}
+
+#memory {
+  /* color: @blue; */
+  margin-right: 15px;
+}
+
+#pulseaudio {
+  /* color: @red; */
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  /* margin-top: 2px; */
+  margin-right: 15px;
+}
+
+/*clock*/
+#clock {
+  /* font-size: 15px; */
+}
+
+#clock label {
+  /* color: @lavender; */
+}
+
+#clock {
+  /* color: @lavender; */
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  /* margin-top: 2px; */
+  border-radius: 10px;
+  background-color: @surface2;
+  color: @text;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+#network {
+  margin-right: 15px;
+}
+
+#network {
+  /* color: @sapphire; */
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  /* margin-top: 2px; */
+}
+
+#battery {
+  /* color: @yellow; */
+  /* font-size: 15px; */
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  /* margin-top: 2px; */
+  margin-right: 20px;
+}

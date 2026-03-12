@@ -1,0 +1,8 @@
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
+
+#export WINEPREFIX="$XDG_DATA_HOME"/wine
+export GNUPGHOME=/home/tom/Dots/gnupg
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/passwords
+export XINITRC="$XDG_DATA_HOME"/X11/xinitrc
+#export HISTFILE="$XDG_DATA_HOME"/zsh/history
+export ATOM_HOME="$XDG_DATA_HOME"/atom
