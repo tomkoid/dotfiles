@@ -2,14 +2,17 @@
 $mainMod = SUPER
 
 $webBrowser = "zen-browser"
-$terminal = "ghostty"
+$terminal = "kitty"
 
 # theme
 source=~/.config/hypr/mocha.conf
 
 # setup monitors
+{{ if eq .chezmoi.hostname "obsidian" -}}
 source = custom/monitors_pc.conf
+{{- else -}}
 source = custom/monitors_notebook.conf
+{{- end }}
 
 # monitor=,preferred,auto,1
 # monitor=HDMI-A-1,1920x1080,1,0x0,mirror,eDP-1
