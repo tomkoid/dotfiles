@@ -361,7 +361,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // https://yalter.github.io/niri/Configuration:-Animations
 animations {
     // Uncomment to turn off all animations.
-    // off
+    off
 
     workspace-switch {
         // spring damping-ratio=1.0 stiffness=500 epsilon=0.00001
