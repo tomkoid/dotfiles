@@ -52,6 +52,16 @@ windowrule {
     float = on
 }
 
+{{ if eq .chezmoi.hostname "obsidian" -}}
+# keep tidal hifi on my left monitor
+windowrule {
+    name = tidal 
+    match:class = ^(tidal-hifi)$
+
+    monitor = DP-3
+}
+{{- end }}
+
 # Resolve pop-ups (e.g. "Change Clip Duration")
 windowrule {
     name = drpopup
