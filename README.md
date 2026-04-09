@@ -32,8 +32,8 @@ Set `has_nvidia = true` on NVIDIA systems, or `false` otherwise.
 
 Some config is selected dynamically from templates:
 
-- `dot_config/hypr/executable_hyprland.conf.tmpl` switches monitor config based on hostname (`obsidian` gets the desktop monitor layout).
-- `dot_config/hypr/custom/rules.conf.tmpl` has extra host-specific window rules for `obsidian`.
+- `dot_config/hypr/executable_hyprland.conf.tmpl` switches monitor config based on hostname (`zeyer` gets the desktop monitor layout).
+- `dot_config/hypr/custom/rules.conf.tmpl` has extra host-specific window rules for `zeyer`.
 - `dot_config/hypr/custom/env.conf.tmpl` enables NVIDIA env vars only when `.has_nvidia` is true.
 
 So the same dotfiles can adapt across machines via hostname and `~/.config/chezmoi/chezmoi.toml` data.
