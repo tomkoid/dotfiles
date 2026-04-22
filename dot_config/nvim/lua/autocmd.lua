@@ -6,6 +6,12 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+-- vim.api.nvim_create_autocmd("FileType", {
+-- 	callback = function()
+-- 		pcall(vim.treesitter.start)
+-- 	end,
+-- })
+
 -- vim.api.nvim_create_autocmd("BufWritePre", {
 --     group = vim.api.nvim_create_augroup("tomkoidgroup", {}),
 --     pattern = "*",

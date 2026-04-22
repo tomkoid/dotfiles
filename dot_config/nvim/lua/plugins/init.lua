@@ -128,6 +128,7 @@ return {
 		opts = {
 			cargo = {
 				features = "all",
+				allTargets = false,
 			},
 			check = {
 				invocationStrategy = "per_workspace",
