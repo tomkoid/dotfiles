@@ -223,7 +223,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+        active-color "#cba6f7"
 
         // Color of the ring on inactive monitors.
         //
@@ -461,7 +461,7 @@ window-rule {
     draw-border-with-background false
 
     // Rounded corners for a modern look.
-    // geometry-corner-radius 10
+    // geometry-corner-radius 8 
 
     // Clips window contents to the rounded corner boundaries.
     clip-to-geometry true
