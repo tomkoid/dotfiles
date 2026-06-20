@@ -133,6 +133,10 @@ return {
 			check = {
 				invocationStrategy = "per_workspace",
 			},
+			diagnostics = {
+				enabled = true,
+				disabled = { "inactive-code" },
+			},
 		},
 		config = function(_, opts)
 			vim.g.rustaceanvim = {
