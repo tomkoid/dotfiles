@@ -29,9 +29,8 @@
     },
     "audio": {
         "mprisBlacklist": [
-            "zen-browser",
-            "Mozilla zen",
-            "Tidal Hi-Fi"
+            "Tidal Hi-Fi",
+            "zen-browser"
         ],
         "preferredPlayer": "tidal-hifi",
         "spectrumFrameRate": 30,
@@ -39,7 +38,7 @@
         "visualizerType": "linear",
         "volumeFeedback": false,
         "volumeFeedbackSoundFile": "",
-        "volumeOverdrive": false,
+        "volumeOverdrive": true,
         "volumeStep": 5
     },
     "bar": {
@@ -76,6 +75,10 @@
         "rightClickCommand": "",
         "rightClickFollowMouse": true,
         "screenOverrides": [
+            {
+                "enabled": false,
+                "name": "DP-1"
+            }
         ],
         "showCapsule": true,
         "showOnWorkspaceSwitch": true,
@@ -580,6 +583,20 @@
                 "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "6"
+            },
+            {
+                "action": "userspaceReboot",
+                "command": "",
+                "countdownEnabled": true,
+                "enabled": false,
+                "keybind": ""
+            },
+            {
+                "action": "rebootToUefi",
+                "command": "",
+                "countdownEnabled": true,
+                "enabled": true,
+                "keybind": "7"
             }
         ],
         "showHeader": true,
