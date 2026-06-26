@@ -13,21 +13,36 @@ listener {
 }
 
 listener {
+    {{ if eq .chezmoi.hostname "zeyer" -}}
+    timeout = 600 
+    {{- else -}}
     timeout = 190
+    {{- end }}
+
     on-timeout = notify-send "Inactivity detected, monitor power off in 10s" -u low -a IDLE -t 10000
 }
 
 listener {
+    {{ if eq .chezmoi.hostname "zeyer" -}}
+    timeout = 615
+    {{- else -}}
     timeout = 200                                   # 3min 20s
+    {{- end }}
+
     on-timeout = niri msg action power-off-monitors # screen off when timeout has passed
 }
 
 listener {
-    timeout = 300                                 # 5min
+    {{ if eq .chezmoi.hostname "zeyer" -}}
+    timeout = 610 
+    {{- else -}}
+    timeout = 300
+    {{- end }}
+
     on-timeout = hyprlock                         # lock screen when timeout has passed
 }
 
 listener {
-    timeout = 900                                 # 8min
+    timeout = 1200
     on-timeout = systemctl suspend                # suspend pc
 }
