@@ -77,6 +77,12 @@ hl.bind(mainMod .. " + CTRL + j", hl.dsp.window.move({ direction = "down" }))
 hl.bind(mainMod .. " + CTRL + k", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + CTRL + l", hl.dsp.window.move({ direction = "right" }))
 
+-- Increase/decrease window size with mainMod + CTRL + SHIFT + hjkl keys
+hl.bind(mainMod .. " + CTRL + SHIFT + h", hl.dsp.window.resize({ x = -50, y = 0, relative = true }))
+hl.bind(mainMod .. " + CTRL + SHIFT + j", hl.dsp.window.resize({ x = 0, y = -50, relative = true }))
+hl.bind(mainMod .. " + CTRL + SHIFT + k", hl.dsp.window.resize({ x = 0, y = 50, relative = true }))
+hl.bind(mainMod .. " + CTRL + SHIFT + l", hl.dsp.window.resize({ x = 50, y = 0, relative = true }))
+
 -- Move between monitors with mainMod + SHIFT + hl keys
 hl.bind(mainMod .. " + SHIFT + h", hl.dsp.focus({ monitor = "left" }))
 hl.bind(mainMod .. " + SHIFT + l", hl.dsp.focus({ monitor = "right" }))
@@ -88,6 +94,19 @@ for i = 1, 10 do
 	local key = i % 10 -- 10 maps to key 0
 	hl.bind(mainMod .. " + " .. key, hs.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hs.dsp.window.move({ workspace = i, follow = false }))
+	hl.bind(mainMod .. " + CTRL + SHIFT + " .. key, function()
+		local current_workspace = hl.get_active_workspace()
+		local windows = hl.get_windows({ workspace = current_workspace })
+		for _, window in ipairs(windows) do
+			hl.notification.create({
+				title = "Moving window to workspace " .. i,
+				duration = 2000,
+				text = "target wrkspc: " .. i .. " win: " .. window.title,
+				timeout = 2000,
+			})
+			hl.dispatch(hl.dsp.window.move({ window = window, workspace = i, follow = true }))
+		end
+	end)
 end
 
 -- Example special workspace (scratchpad)
