@@ -9,14 +9,15 @@ hl.curve("fastSnappy", { type = "bezier", points = { { 0.1, 1.0 }, { 0.1, 1.0 } 
 
 -- Default springs
 hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+hl.curve("windows", { type = "spring", mass = 1, stiffness = 98.2633, dampening = 20.0 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows", enabled = true, speed = 99.79, spring = "easy" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 1.1, spring = "easy", style = "popin 17%" })
+hl.animation({ leaf = "windows", enabled = true, speed = 1, spring = "windows" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 2, spring = "easy", style = "popin 7%" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.49, bezier = "linear", style = "popin 87%" })
-hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 0.73, bezier = "almostLinear" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 0.73, bezier = "almostLinear" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
 hl.animation({ leaf = "layers", enabled = true, speed = 3.81, bezier = "easeOutQuint" })
 hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "easeOutQuint", style = "fade" })
