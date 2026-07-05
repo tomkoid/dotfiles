@@ -121,9 +121,9 @@ hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
 -- hl.bind(mainMod .. " + CTRL + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 -- hl.bind(mainMod .. " + CTRL + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 --
--- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + SHIFT + mouse_down", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + SHIFT + mouse_up", hl.dsp.focus({ direction = "left" }))
+-- Scroll through existing windows within a workspace with mainMod + SHIFT + scroll
+hl.bind(mainMod .. " + SHIFT + mouse_down", hl.dsp.focus({ direction = "right", follow = false }))
+hl.bind(mainMod .. " + SHIFT + mouse_up", hl.dsp.focus({ direction = "left", follow = false }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })

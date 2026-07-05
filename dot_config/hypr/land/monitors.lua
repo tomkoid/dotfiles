@@ -7,6 +7,7 @@ hl.monitor({
 	mode = "1920x1080@120",
 	position = "1024x0",
 	scale = "1",
+	vrr = true,
 })
 
 hl.monitor({
@@ -19,6 +20,6 @@ hl.monitor({
 hl.monitor({
 	output = "DP-3",
 	mode = "1024x768@60",
-	position = "0x70",
+	position = "0x180",
 	scale = "1",
 })
