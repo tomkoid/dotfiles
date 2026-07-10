@@ -17,6 +17,19 @@ local suppressMaximizeRule = hl.window_rule({
 -- suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule({
+	match = { class = "dev.noctalia.Noctalia" },
+	float = true,
+	-- size = { 1080, 920 },
+})
+
+hl.layer_rule({
+	match = { namespace = "noctalia-bar-*" },
+	no_anim = true,
+	enabled = false,
+	order = -10,
+})
+
+hl.window_rule({
 	-- Fix some dragging issues with XWayland
 	name = "fix-xwayland-drags",
 	match = {

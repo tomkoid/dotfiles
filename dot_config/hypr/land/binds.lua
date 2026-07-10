@@ -77,6 +77,50 @@ hl.bind(mainMod .. " + CTRL + j", hl.dsp.window.move({ direction = "down" }))
 hl.bind(mainMod .. " + CTRL + k", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + CTRL + l", hl.dsp.window.move({ direction = "right" }))
 
+local function check_if_workspace_empty(workspace_id)
+	local windows = hl.get_windows({ workspace = workspace_id })
+	return #windows == 0
+end
+
+-- Move all windows in a workspace to another workspace with mainMod + SHIFT + u/i keys (niri like)
+hl.bind(mainMod .. " + SHIFT + u", function()
+	local current_workspace_id = hl.get_active_workspace().id
+	local target_workspace_id = current_workspace_id + 1
+	while not check_if_workspace_empty(target_workspace_id) do
+		target_workspace_id = target_workspace_id + 1
+		-- no upper bound here (multiple monitor issues)
+	end
+
+	local windows = hl.get_windows({ workspace = current_workspace_id })
+	for _, window in ipairs(windows) do
+		hl.dispatch(hl.dsp.window.move({ window = window, workspace = target_workspace_id, follow = false }))
+	end
+	hl.dispatch(hl.dsp.focus({ workspace = target_workspace_id }))
+end)
+
+hl.bind(mainMod .. " + SHIFT + i", function()
+	local current_workspace_id = hl.get_active_workspace().id
+	local target_workspace_id = current_workspace_id - 1
+	while not check_if_workspace_empty(target_workspace_id) do
+		target_workspace_id = target_workspace_id - 1
+		if target_workspace_id <= 0 then
+			hl.notification.create({
+				title = "No empty workspace found",
+				duration = 2000,
+				text = "Cannot move windows to a non-existent workspace",
+				timeout = 1000,
+			})
+			return
+		end
+	end
+
+	local windows = hl.get_windows({ workspace = current_workspace_id })
+	for _, window in ipairs(windows) do
+		hl.dispatch(hl.dsp.window.move({ window = window, workspace = target_workspace_id, follow = false }))
+	end
+	hl.dispatch(hl.dsp.focus({ workspace = target_workspace_id }))
+end)
+
 -- Increase/decrease window size with mainMod + CTRL + SHIFT + hjkl keys
 hl.bind(mainMod .. " + CTRL + SHIFT + h", hl.dsp.window.resize({ x = -50, y = 0, relative = true }))
 hl.bind(mainMod .. " + CTRL + SHIFT + j", hl.dsp.window.resize({ x = 0, y = -50, relative = true }))
