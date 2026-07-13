@@ -1,7 +1,3 @@
------------------------
----- LOOK AND FEEL ----
------------------------
-
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
 	general = {
@@ -26,6 +22,7 @@ hl.config({
 
 	binds = {
 		scroll_event_delay = 0,
+		-- movefocus_cycles_fullscreen = false,
 	},
 
 	decoration = {
@@ -34,7 +31,7 @@ hl.config({
 
 		-- Change transparency of focused and unfocused windows
 		active_opacity = 1.0,
-		inactive_opacity = 1.0,
+		inactive_opacity = 0.95,
 
 		shadow = {
 			enabled = true,
@@ -52,5 +49,10 @@ hl.config({
 
 	animations = {
 		enabled = true,
+	},
+
+	misc = {
+		force_default_wallpaper = -1, -- Set to 0 or 1 to disable the anime mascot wallpapers
+		disable_hyprland_logo = false, -- If true disables the random hyprland logo / anime girl background. :(
 	},
 })

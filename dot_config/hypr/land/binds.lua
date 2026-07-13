@@ -21,8 +21,10 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(FILEMANAGER))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd(MENU))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(WEBBROWSER))
--- hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+-- hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen_state({ internal = 1, client = 0 }))
+-- hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+-- hl.bind(mainMod .. " + F", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 -- FULLSCREEN JUNK
@@ -57,14 +59,57 @@ hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen
 -- 	end
 -- end)
 
+local window_states = {}
+local function move_focus(dir)
+	-- save window state for recovery later
+	local win = hl.get_active_window()
+	local wins_on_wrkspc = hl.get_active_workspace().windows -- prevent from the first window always being fullscreened
+	if wins_on_wrkspc ~= 1 and win and win.fullscreen ~= 0 then
+		window_states[win.address] = win.fullscreen
+	end
+
+	hl.dispatch(hl.dsp.window.fullscreen({ action = "unset", mode = "maximized" }))
+	hl.dispatch(hl.dsp.focus({ direction = dir }))
+end
+
+-- hook into the window active event
+hl.on("window.active", function(w)
+	if window_states[w.address] then
+		-- local win = hl.get_window(w) -- get a mutable copy
+		-- win.fullscreen = window_states[w.address]
+		local f_val = window_states[w.address]
+		local mode
+		if f_val == 1 then
+			mode = "maximized"
+		elseif f_val == 2 then
+			mode = "fullscreened"
+		else
+			hl.notification.create({
+				text = "this should never happen: on window active event fullscreen recover invalid state\nactual value: "
+					.. f_val,
+				duration = 2000,
+				timeout = 2000,
+			})
+		end
+		hl.dispatch(hl.dsp.window.fullscreen({ mode = mode, window = w }))
+
+		window_states[w.address] = nil -- reset window state
+	end
+end)
+
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
 -- Move focus with mainMod + arrow keys
-hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + h", function()
+	move_focus("left")
+end)
+
 hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + l", function()
+	move_focus("right")
+end)
 
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
@@ -166,8 +211,12 @@ hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
 -- hl.bind(mainMod .. " + CTRL + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 --
 -- Scroll through existing windows within a workspace with mainMod + SHIFT + scroll
-hl.bind(mainMod .. " + SHIFT + mouse_down", hl.dsp.focus({ direction = "right", follow = false }))
-hl.bind(mainMod .. " + SHIFT + mouse_up", hl.dsp.focus({ direction = "left", follow = false }))
+hl.bind(mainMod .. " + SHIFT + mouse_up", function()
+	move_focus("left")
+end)
+hl.bind(mainMod .. " + SHIFT + mouse_down", function()
+	move_focus("right")
+end)
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })

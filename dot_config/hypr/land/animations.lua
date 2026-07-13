@@ -8,12 +8,12 @@ hl.curve("fluentDecel", { type = "bezier", points = { { 0.1, 1 }, { 0, 1 } } })
 hl.curve("fastSnappy", { type = "bezier", points = { { 0.1, 1.0 }, { 0.1, 1.0 } } })
 
 -- Default springs
-hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
-hl.curve("windows", { type = "spring", mass = 1, stiffness = 98.2633, dampening = 20.0 })
+hl.curve("easy", { type = "spring", mass = 1, stiffness = 501.2633, dampening = 45.8273644 })
+hl.curve("windows", { type = "spring", mass = 1, stiffness = 750.2633, dampening = 60.51 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows", enabled = true, speed = 1, spring = "windows" })
+hl.animation({ leaf = "windows", enabled = true, speed = 5, spring = "windows" })
 hl.animation({ leaf = "windowsIn", enabled = true, speed = 2, spring = "easy", style = "popin 7%" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.49, bezier = "linear", style = "popin 87%" })
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 0.73, bezier = "almostLinear" })
