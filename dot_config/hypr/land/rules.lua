@@ -72,3 +72,14 @@ hl.window_rule({
 	move = "20 monitor_h-120",
 	float = true,
 })
+
+-- tearing
+hl.window_rule({
+	match = { class = "cs2" },
+	immediate = true,
+})
+
+hl.window_rule({
+	match = { class = "geometrydash.exe" },
+	immediate = true,
+})

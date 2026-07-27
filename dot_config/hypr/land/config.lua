@@ -15,14 +15,15 @@ hl.config({
 		resize_on_border = false,
 
 		-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
-		allow_tearing = false,
+		allow_tearing = true,
 
 		layout = "scrolling",
 	},
 
 	binds = {
 		scroll_event_delay = 0,
-		-- movefocus_cycles_fullscreen = false,
+		-- movefocus_cycles_fullscreen = true,
+		-- movefocus_cycles_fullscreen
 	},
 
 	decoration = {
@@ -31,7 +32,7 @@ hl.config({
 
 		-- Change transparency of focused and unfocused windows
 		active_opacity = 1.0,
-		inactive_opacity = 0.95,
+		-- inactive_opacity = 0.95,
 
 		shadow = {
 			enabled = true,
@@ -52,7 +53,8 @@ hl.config({
 	},
 
 	misc = {
-		force_default_wallpaper = -1, -- Set to 0 or 1 to disable the anime mascot wallpapers
+		force_default_wallpaper = 0, -- Set to 0 or 1 to disable the anime mascot wallpapers
 		disable_hyprland_logo = false, -- If true disables the random hyprland logo / anime girl background. :(
+		-- on_focus_under_fullscreen = 1,
 	},
 })
