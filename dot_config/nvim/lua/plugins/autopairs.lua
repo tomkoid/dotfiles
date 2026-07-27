@@ -13,15 +13,15 @@
 -- }
 return {
 	"saghen/blink.pairs",
-	version = "*", -- (recommended) only required with prebuilt binaries
+	dependencies = "saghen/blink.lib",
 
-	-- download prebuilt binaries from github releases
-	dependencies = "saghen/blink.download",
-	-- OR build from source, requires nightly:
-	-- https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-	-- build = 'cargo build --release',
-	-- If you use nix, you can build from source using latest nightly rust with:
-	-- build = 'nix run .#build-plugin',
+	version = "*",
+	-- download prebuilt binaries from github releases, must be on a versioned release
+	build = function()
+		require("blink.pairs").download():pwait(60000)
+	end,
+	-- OR build from source
+	-- build = function() require('blink.pairs').build():pwait(60000) end,
 
 	--- @module 'blink.pairs'
 	--- @type blink.pairs.Config
@@ -35,23 +35,25 @@ return {
 			-- or disable with `vim.g.pairs = false` (global) and `vim.b.pairs = false` (per-buffer)
 			-- and/or with `vim.g.blink_pairs = false` and `vim.b.blink_pairs = false`
 			disabled_filetypes = {},
+			wrap = {
+				-- move closing pair via motion
+				["<C-b>"] = "motion",
+				-- move opening pair via motion
+				["<C-S-b>"] = "motion_reverse",
+				-- set to 'treesitter' or 'treesitter_reverse' to use treesitter instead of motions
+				-- set to nil, '' or false to disable the mapping
+				-- normal_mode = {} <- for normal mode mappings, only supports 'motion' and 'motion_reverse'
+			},
 			-- see the defaults:
-			-- https://github.com/Saghen/blink.pairs/blob/main/lua/blink/pairs/config/mappings.lua#L14
+			-- https://github.com/Saghen/blink.pairs/blob/main/lua/blink/pairs/config/mappings.lua#L52
 			pairs = {},
 		},
 		highlights = {
 			enabled = true,
-			-- requires require('vim._extui').enable({}), otherwise has no effect
+			-- requires require('vim._core.ui2').enable({}), otherwise has no effect
 			cmdline = true,
-			groups = {
-				"BlinkPairsRed",
-				"BlinkPairsYellow",
-				"BlinkPairsBlue",
-				"BlinkPairsOrange",
-				"BlinkPairsGreen",
-				"BlinkPairsPurple",
-				"BlinkPairsCyan",
-			},
+			-- set to { 'BlinkPairs' } to disable rainbow highlighting
+			groups = { "BlinkPairsOrange", "BlinkPairsPurple", "BlinkPairsBlue" },
 			unmatched_group = "BlinkPairsUnmatched",
 
 			-- highlights matching pairs under the cursor

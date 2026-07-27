@@ -41,15 +41,67 @@ return {
 	},
 
 	-- {
-	-- 	"folke/tokyonight.nvim",
+	-- 	"ellisonleao/gruvbox.nvim",
+	-- 	priority = 1000,
+	-- 	config = true,
+	-- 	init = function()
+	-- 		vim.cmd.colorscheme("gruvbox")
+	-- 	end,
+	-- 	opts = {
+	-- 		terminal_colors = true, -- add neovim terminal colors
+	-- 		undercurl = true,
+	-- 		underline = true,
+	-- 		bold = true,
+	-- 		italic = {
+	-- 			strings = true,
+	-- 			emphasis = true,
+	-- 			comments = true,
+	-- 			operators = false,
+	-- 			folds = true,
+	-- 		},
+	-- 		strikethrough = true,
+	-- 		invert_selection = false,
+	-- 		invert_signs = false,
+	-- 		invert_tabline = false,
+	-- 		inverse = true, -- invert background for search, diffs, statuslines and errors
+	-- 		contrast = "", -- can be "hard", "soft" or empty string
+	-- 		palette_overrides = {},
+	-- 		overrides = {},
+	-- 		dim_inactive = false,
+	-- 		transparent_mode = false,
+	-- 	},
+	-- },
+	-- {
+	-- 	"f4z3r/gruvbox-material.nvim",
+	-- 	name = "gruvbox-material",
 	-- 	lazy = false,
 	-- 	priority = 1000,
-	-- 	opts = {},
-	-- 	init = function()
-	-- 		vim.cmd [[colorscheme tokyonight-night]]
-	-- 	end
+	-- 	opts = {
+	-- 		italics = true, -- enable italics in general
+	-- 		contrast = "hard", -- set contrast, can be any of "hard", "medium", "soft"
+	-- 		comments = {
+	-- 			italics = true, -- enable italic comments
+	-- 		},
+	-- 		background = {
+	-- 			transparent = false, -- set the background to be opaque
+	-- 		},
+	-- 		float = {
+	-- 			force_background = false, -- set to true to force backgrounds on floats even when
+	-- 			-- background.transparent is set
+	-- 			background_color = nil, -- set color for float backgrounds. If nil, uses the default color set
+	-- 			-- by the color scheme
+	-- 		},
+	-- 		signs = {
+	-- 			force_background = false, -- set to true to force backgrounds on signs even when
+	-- 			-- background.transparent is set
+	-- 			background_color = nil, -- set color for sign backgrounds. If nil, uses the default color set
+	-- 			-- by the color scheme
+	-- 		},
+	-- 		customize = nil, -- customize the theme in any way you desire, see below what this
+	-- 		-- configuration accepts
+	-- 	},
 	-- },
-
+	--
 	-- Highlight todo, notes, etc in comments
 	{
 		"folke/todo-comments.nvim",
