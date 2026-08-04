@@ -102,11 +102,33 @@ hl.bind(mainMod .. " + SHIFT + i", function()
 	hl.dispatch(hl.dsp.focus({ workspace = target_workspace_id }))
 end)
 
+local function resize_window(x, y)
+	local window = hl.get_active_window()
+	if window then
+		local win_size = window.size
+		hl.notification.create({
+			title = "Resizing window",
+			duration = 2000,
+			text = "New size: " .. (win_size.x + x) .. "x" .. (win_size.y + y),
+			timeout = 1000,
+		})
+		hl.dispatch(hl.dsp.window.resize({ x = win_size.x + x, y = win_size.y + y, relative = false }))
+	end
+end
+
 -- Increase/decrease window size with mainMod + CTRL + SHIFT + hjkl keys
-hl.bind(mainMod .. " + CTRL + SHIFT + h", hl.dsp.window.resize({ x = -50, y = 0, relative = true }))
-hl.bind(mainMod .. " + CTRL + SHIFT + j", hl.dsp.window.resize({ x = 0, y = -50, relative = true }))
-hl.bind(mainMod .. " + CTRL + SHIFT + k", hl.dsp.window.resize({ x = 0, y = 50, relative = true }))
-hl.bind(mainMod .. " + CTRL + SHIFT + l", hl.dsp.window.resize({ x = 50, y = 0, relative = true }))
+hl.bind(mainMod .. " + CTRL + SHIFT + h", function()
+	resize_window(-50, 0)
+end)
+hl.bind(mainMod .. " + CTRL + SHIFT + j", function()
+	resize_window(0, -50)
+end)
+hl.bind(mainMod .. " + CTRL + SHIFT + k", function()
+	resize_window(0, 50)
+end)
+hl.bind(mainMod .. " + CTRL + SHIFT + l", function()
+	resize_window(50, 0)
+end)
 
 -- Move between monitors with mainMod + SHIFT + hl keys
 hl.bind(mainMod .. " + SHIFT + h", hl.dsp.focus({ monitor = "left" }))

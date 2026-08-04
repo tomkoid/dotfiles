@@ -18,5 +18,6 @@ hl.config({
 		fullscreen_on_one_column = true,
 		follow_focus = true,
 		follow_min_visible = 0.67,
+		focus_fit_method = 1,
 	},
 })
