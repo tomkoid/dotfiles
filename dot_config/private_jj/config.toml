@@ -18,6 +18,33 @@ backend = "gpg"
 key = "D4403E79602EE85B"
 # key = "signing@example.com"
 
+[remotes.origin]
+auto-track-bookmarks = "*"
+
+[revset-aliases]
+# set all remote bookmarks (commits pushed to remote branches) to be immutable
+'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
+
+# Useful relative branch markers
+'closest_bookmark(to)' = 'heads(::to & bookmarks() & ~trunk())'
+'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
+# Bookmarks markers
+'mybookmarks' = "mine() & bookmarks()"
+# All revisions from trunks to my bookmarks
+'mybranches' = "trunk() | (trunk()..mybookmarks) | mybookmarks | (mybookmarks.. & ~bookmarks())"
+
+
 [aliases]
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+# tug = [
+#     "bookmark",
+#     "move",
+#     "--from",
+#     "closest_bookmark(@)",
+#     "--to",
+#     "closest_pushable(@)",
+# ]
 tup = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
+i = ["git", "init", "--colocate"]
+f = ["git", "fetch"]
+p = ["git", "push"]
