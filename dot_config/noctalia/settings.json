@@ -179,6 +179,8 @@
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
+                        "steam",
+                        "Element * | Dicator dystopia"
                     ]
                 },
                 {
@@ -247,7 +249,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Catppuccin",
+        "predefinedScheme": "Ayu",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -475,10 +477,10 @@
     "nightLight": {
         "autoSchedule": false,
         "dayTemp": "6500",
-        "enabled": false,
+        "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
-        "manualSunset": "22:30",
+        "manualSunset": "22:00",
         "nightTemp": "3321"
     },
     "noctaliaPerformance": {
