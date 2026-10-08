@@ -8,9 +8,10 @@
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function()
-	hl.exec_cmd("setsid -f qs -c noctalia-shell")
+	hl.exec_cmd("setsid -f noctalia")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("nm-applet")
+	hl.exec_cmd("ghostty")
 	hl.exec_cmd("mpd")
 	hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 	hl.exec_cmd("/usr/libexec/kf6/polkit-kde-authentication-agent-1")
