@@ -6,20 +6,20 @@ sound_volume = 0.29999999329447746
 
 [bar.default]
 end = [
-    "media",
     "tray",
+    "caffeine",
     "notifications",
     "clipboard",
     "volume",
     "network",
     "bluetooth",
-    "brightness",
     "battery",
+    "brightness",
     "control-center",
     "session"
 ]
 margin_ends = 0
-start = [ "wallpaper", "workspaces" ]
+start = [ "wallpaper", "workspaces", "sysmon", "temp", "ram", "media" ]
 thickness = 30
 widget_spacing = 10
 
@@ -120,8 +120,15 @@ widget_order = [ "lockscreen-login-box@DP-3", "lockscreen-login-box@DP-2", "lock
 [nightlight]
 enabled = true
 
+[osd]
+monitors = [ "DP-3" ]
+
 [shell]
-font_family = "Iosevka Nerd Font"
+font_family = "Iosevka NF"
+
+[system.monitor]
+cpu_temp_activity_threshold = 70
+gpu_temp_activity_threshold = 70
 
 [theme]
 community_palette = "Catppuccin Mocha Blue"
@@ -149,5 +156,23 @@ font_weight = 700
 format = "{:%d/%m/%y %H:%M:%S}"
 
 [widget.media]
+capsule = true
+hide_when_no_media = true
 max_length = 280
-show_progress = true
+
+[widget.network]
+show_label = false
+
+[widget.sysmon]
+visualization = "none"
+
+[widget.tray]
+capsule = true
+
+[widget.workspaces]
+active_pill_size = 0.25
+focused_color = "tertiary"
+focused_output_only = true
+font_scale = 1.25
+inactive_pill_size = 0.25
+occupied_color = "on_primary"
