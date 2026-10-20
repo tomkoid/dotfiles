@@ -79,7 +79,11 @@ hl.window_rule({
 	immediate = true,
 })
 
+-- Window rule for Geometry Dash (match class or steam_app ID)
 hl.window_rule({
-	match = { class = "geometrydash.exe" },
+	match = {
+		class = "^(steam_app_322170)$",
+	},
+	fullscreen = true,
 	immediate = true,
 })
