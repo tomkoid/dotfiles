@@ -42,10 +42,11 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
 -- Move focus with mainMod + arrow keys
-hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
-hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
+-- hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + h", hl.dsp.layout("focus l"))
+hl.bind(mainMod .. " + j", hl.dsp.layout("focus d"))
+hl.bind(mainMod .. " + k", hl.dsp.layout("focus u"))
+hl.bind(mainMod .. " + l", hl.dsp.layout("focus r"))
 
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
@@ -53,10 +54,12 @@ hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
 -- Move windows with mainMod + CTRL + hjkl keys
-hl.bind(mainMod .. " + CTRL + h", hl.dsp.window.move({ direction = "left" }))
+-- hl.bind(mainMod .. " + CTRL + h", hl.dsp.window.move({ direction = "left" }))
+-- hl.bind(mainMod .. " + CTRL + j", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. " + CTRL + h", hl.dsp.layout("swapcol l"))
 hl.bind(mainMod .. " + CTRL + j", hl.dsp.window.move({ direction = "down" }))
 hl.bind(mainMod .. " + CTRL + k", hl.dsp.window.move({ direction = "up" }))
-hl.bind(mainMod .. " + CTRL + l", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + CTRL + l", hl.dsp.layout("swapcol r"))
 
 local function check_if_workspace_empty(workspace_id)
 	local windows = hl.get_windows({ workspace = workspace_id })
